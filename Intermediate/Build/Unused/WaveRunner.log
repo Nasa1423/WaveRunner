@@ -1,0 +1,8 @@
+﻿  Using bundled DotNet SDK
+  Log file: C:\Users\arssu\AppData\Local\UnrealBuildTool\Log.txt
+  Invalidating makefile for WaveRunnerEditor (MegascansPlugin.Build.cs modified)
+  Parsing headers for WaveRunnerEditor
+    Running UnrealHeaderTool "D:\Coding\UEProjects\WaveRunner 5.0\WaveRunner.uproject" "D:\Coding\UEProjects\WaveRunner 5.0\Intermediate\Build\Win64\WaveRunnerEditor\Development\WaveRunnerEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\arssu\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for WaveRunnerEditor in 17,036308 seconds
+UnrealBuildTool : error : Unable to build while Live Coding is active. Exit the editor and game, or press Ctrl+Alt+F11 if iterating on code in the editor or game
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.MakeFile.Targets(44,5): error MSB3073: выход из команды "D:\UE_5.0\Engine\Build\BatchFiles\Build.bat WaveRunnerEditor Win64 Development -Project="D:\Coding\UEProjects\WaveRunner 5.0\WaveRunner.uproject" -WaitMutex -FromMsBuild" с кодом 6.

@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\coding\\ueprojects\\waverunner 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\waverunner\\waverunner.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\coding\\ueprojects\\waverunner 5.0\\intermediate\\build\\win64\\waverunnereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\coding\\ueprojects\\waverunner 5.0\\intermediate\\build\\win64\\unrealeditor\\development\\waverunner\\definitions.waverunner.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
