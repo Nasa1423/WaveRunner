@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\Coding\\UEProjects\\WaveRunner 5.0\\Source\\WaveRunner\\WaveRunner.Build.cs",
-		"D:\\Coding\\UEProjects\\WaveRunner 5.0\\Source\\WaveRunner.Target.cs",
-		"D:\\Coding\\UEProjects\\WaveRunner 5.0\\Source\\WaveRunnerEditor.Target.cs"
+		"D:\\Coding\\WaveRunner\\Source\\WaveRunner\\WaveRunner.Build.cs",
+		"D:\\Coding\\WaveRunner\\Source\\WaveRunner.Target.cs",
+		"D:\\Coding\\WaveRunner\\Source\\WaveRunnerEditor.Target.cs"
 	],
 	"EngineVersion": "5.0.2"
 }

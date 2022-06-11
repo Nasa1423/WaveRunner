@@ -1,17 +1,18 @@
 ﻿  Using bundled DotNet SDK
   Log file: C:\Users\arssu\AppData\Local\UnrealBuildTool\Log.txt
+  Using 'git status' to determine working set for adaptive non-unity build (D:\Coding\WaveRunner).
   Building WaveRunnerEditor...
   Using Visual Studio 2022 14.32.31329 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  [Adaptive Build] Excluded from WaveRunner unity file: WaveRunner.cpp, WaveRunnerCharacter.cpp, WaveRunnerGameMode.cpp
+  [Adaptive Build] Excluded from WaveRunner unity file: WaveRunnerCharacter.cpp
   Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
     Executing up to 4 processes, one per physical core
-    Requested 1,5 GB free memory per action, 5,1 GB available: limiting max parallel actions to 3
-  Building 4 actions with 3 processes...
+    Requested 1,5 GB free memory per action, 3,51 GB available: limiting max parallel actions to 2
+  Building 4 actions with 2 processes...
   [1/4] Compile WaveRunnerCharacter.cpp
-  [2/4] Link UnrealEditor-WaveRunner-0003.lib
-     Создается библиотека D:\Coding\UEProjects\WaveRunner 5.0\Intermediate\Build\Win64\UnrealEditor\Development\WaveRunner\UnrealEditor-WaveRunner-0003.lib и объект D:\Coding\UEProjects\WaveRunner 5.0\Intermediate\Build\Win64\UnrealEditor\Development\WaveRunner\UnrealEditor-WaveRunner-0003.exp
-  [3/4] Link UnrealEditor-WaveRunner-0003.dll
-     Создается библиотека D:\Coding\UEProjects\WaveRunner 5.0\Intermediate\Build\Win64\UnrealEditor\Development\WaveRunner\UnrealEditor-WaveRunner-0003.suppressed.lib и объект D:\Coding\UEProjects\WaveRunner 5.0\Intermediate\Build\Win64\UnrealEditor\Development\WaveRunner\UnrealEditor-WaveRunner-0003.suppressed.exp
+  [2/4] Link UnrealEditor-WaveRunner-0006.lib
+     Создается библиотека D:\Coding\WaveRunner\Intermediate\Build\Win64\UnrealEditor\Development\WaveRunner\UnrealEditor-WaveRunner-0006.lib и объект D:\Coding\WaveRunner\Intermediate\Build\Win64\UnrealEditor\Development\WaveRunner\UnrealEditor-WaveRunner-0006.exp
+  [3/4] Link UnrealEditor-WaveRunner-0006.dll
+     Создается библиотека D:\Coding\WaveRunner\Intermediate\Build\Win64\UnrealEditor\Development\WaveRunner\UnrealEditor-WaveRunner-0006.suppressed.lib и объект D:\Coding\WaveRunner\Intermediate\Build\Win64\UnrealEditor\Development\WaveRunner\UnrealEditor-WaveRunner-0006.suppressed.exp
   [4/4] WriteMetadata WaveRunnerEditor.target
-  Total time in Parallel executor: 4,36 seconds
-  Total execution time: 5,60 seconds
+  Total time in Parallel executor: 10,22 seconds
+  Total execution time: 11,94 seconds

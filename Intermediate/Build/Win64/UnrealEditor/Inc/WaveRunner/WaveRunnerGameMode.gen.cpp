@@ -76,15 +76,15 @@ void EmptyLinkFunctionForGeneratedCodeWaveRunnerGameMode() {}
 		return AWaveRunnerGameMode::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AWaveRunnerGameMode);
-	struct Z_CompiledInDeferFile_FID_WaveRunner_5_0_Source_WaveRunner_WaveRunnerGameMode_h_Statics
+	struct Z_CompiledInDeferFile_FID_WaveRunner_Source_WaveRunner_WaveRunnerGameMode_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_WaveRunner_5_0_Source_WaveRunner_WaveRunnerGameMode_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_WaveRunner_Source_WaveRunner_WaveRunnerGameMode_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_AWaveRunnerGameMode, AWaveRunnerGameMode::StaticClass, TEXT("AWaveRunnerGameMode"), &Z_Registration_Info_UClass_AWaveRunnerGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaveRunnerGameMode), 2710683780U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_WaveRunner_5_0_Source_WaveRunner_WaveRunnerGameMode_h_400644841(TEXT("/Script/WaveRunner"),
-		Z_CompiledInDeferFile_FID_WaveRunner_5_0_Source_WaveRunner_WaveRunnerGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_WaveRunner_5_0_Source_WaveRunner_WaveRunnerGameMode_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_WaveRunner_Source_WaveRunner_WaveRunnerGameMode_h_400644841(TEXT("/Script/WaveRunner"),
+		Z_CompiledInDeferFile_FID_WaveRunner_Source_WaveRunner_WaveRunnerGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_WaveRunner_Source_WaveRunner_WaveRunnerGameMode_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

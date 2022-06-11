@@ -1,10 +1,10 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\coding\\ueprojects\\waverunner 5.0\\intermediate\\build\\win64\\waverunnereditor\\development\\engine\\sharedpch.engine.shadowerrors.cpp",
+        "Source": "d:\\coding\\waverunner\\intermediate\\build\\win64\\waverunnereditor\\development\\engine\\sharedpch.engine.shadowerrors.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "d:\\coding\\ueprojects\\waverunner 5.0\\intermediate\\build\\win64\\waverunnereditor\\development\\engine\\sharedpch.engine.shadowerrors.h",
+            "d:\\coding\\waverunner\\intermediate\\build\\win64\\waverunnereditor\\development\\engine\\sharedpch.engine.shadowerrors.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\engine\\public\\enginesharedpch.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\core\\public\\containers\\containersfwd.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\core\\public\\hal\\platform.h",

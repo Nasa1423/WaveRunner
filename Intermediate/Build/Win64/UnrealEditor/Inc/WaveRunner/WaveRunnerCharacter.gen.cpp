@@ -141,15 +141,15 @@ void EmptyLinkFunctionForGeneratedCodeWaveRunnerCharacter() {}
 		return AWaveRunnerCharacter::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AWaveRunnerCharacter);
-	struct Z_CompiledInDeferFile_FID_WaveRunner_5_0_Source_WaveRunner_WaveRunnerCharacter_h_Statics
+	struct Z_CompiledInDeferFile_FID_WaveRunner_Source_WaveRunner_WaveRunnerCharacter_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_WaveRunner_5_0_Source_WaveRunner_WaveRunnerCharacter_h_Statics::ClassInfo[] = {
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_WaveRunner_Source_WaveRunner_WaveRunnerCharacter_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_AWaveRunnerCharacter, AWaveRunnerCharacter::StaticClass, TEXT("AWaveRunnerCharacter"), &Z_Registration_Info_UClass_AWaveRunnerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaveRunnerCharacter), 1708400530U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_WaveRunner_5_0_Source_WaveRunner_WaveRunnerCharacter_h_1601625289(TEXT("/Script/WaveRunner"),
-		Z_CompiledInDeferFile_FID_WaveRunner_5_0_Source_WaveRunner_WaveRunnerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_WaveRunner_5_0_Source_WaveRunner_WaveRunnerCharacter_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_WaveRunner_Source_WaveRunner_WaveRunnerCharacter_h_1601625289(TEXT("/Script/WaveRunner"),
+		Z_CompiledInDeferFile_FID_WaveRunner_Source_WaveRunner_WaveRunnerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_WaveRunner_Source_WaveRunner_WaveRunnerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

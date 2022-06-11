@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeWaveRunner_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x92D61107,
+				0x72C1A448,
 				0xCF24A555,
 				METADATA_PARAMS(nullptr, 0)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeWaveRunner_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_WaveRunner.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_WaveRunner(Z_Construct_UPackage__Script_WaveRunner, TEXT("/Script/WaveRunner"), Z_Registration_Info_UPackage__Script_WaveRunner, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x92D61107, 0xCF24A555));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_WaveRunner(Z_Construct_UPackage__Script_WaveRunner, TEXT("/Script/WaveRunner"), Z_Registration_Info_UPackage__Script_WaveRunner, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x72C1A448, 0xCF24A555));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

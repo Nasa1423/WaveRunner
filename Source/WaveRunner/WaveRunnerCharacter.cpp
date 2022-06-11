@@ -23,22 +23,23 @@ AWaveRunnerCharacter::AWaveRunnerCharacter()
 	bUseControllerRotationRoll = false;
 
 	// Set the size of our collision capsule.
-	GetCapsuleComponent()->SetCapsuleHalfHeight(1800.0f);
+	GetCapsuleComponent()->SetCapsuleHalfHeight(250.0f);
 	GetCapsuleComponent()->SetCapsuleRadius(100.0f);
 
 	// Create a camera boom attached to the root (capsule)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->TargetArmLength = 500.0f;
+	CameraBoom->TargetArmLength = 1500.0f;
 	CameraBoom->SocketOffset = FVector(0.0f, 0.0f, 75.0f);
 	CameraBoom->SetUsingAbsoluteRotation(true);
 	CameraBoom->bDoCollisionTest = false;
-	CameraBoom->SetRelativeRotation(FRotator(0.0f, -60.0f, 0.0f));
+	CameraBoom->SetRelativeRotation(FRotator(0.0f, -80.0f, 0.0f));
 
 
 	// Create an orthographic camera (no perspective) and attach it to the boom
 	SideViewCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("SideViewCamera"));
-	SideViewCameraComponent->ProjectionMode = ECameraProjectionMode::Orthographic;
+	//SideViewCameraComponent->ProjectionMode = ECameraProjectionMode::Orthographic;
+	SideViewCameraComponent->ProjectionMode = ECameraProjectionMode::Perspective;
 	SideViewCameraComponent->OrthoWidth = 2048.0f;
 	SideViewCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 
@@ -49,11 +50,11 @@ AWaveRunnerCharacter::AWaveRunnerCharacter()
 	GetCharacterMovement()->bOrientRotationToMovement = false;
 
 	// Configure character movement
-	GetCharacterMovement()->GravityScale = 2.0f;
-	GetCharacterMovement()->AirControl = 0.80f;
-	GetCharacterMovement()->JumpZVelocity = 1000.f;
-	GetCharacterMovement()->GroundFriction = 3.0f;
-	GetCharacterMovement()->MaxWalkSpeed = 120.0f;
+	GetCharacterMovement()->GravityScale = 10.0f;
+	GetCharacterMovement()->AirControl = 100.60f;
+	GetCharacterMovement()->JumpZVelocity = 3500.f;
+	GetCharacterMovement()->GroundFriction = 15000.0f;
+	GetCharacterMovement()->MaxWalkSpeed = 1800.0f;
 	GetCharacterMovement()->MaxFlySpeed = 600.0f;
 
 	// Lock character motion onto the XZ plane, so the character can't move in or out of the screen

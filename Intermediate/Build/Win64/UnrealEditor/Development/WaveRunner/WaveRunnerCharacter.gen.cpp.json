@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\coding\\ueprojects\\waverunner 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\waverunner\\waverunnercharacter.gen.cpp",
+        "Source": "d:\\coding\\waverunner\\intermediate\\build\\win64\\unrealeditor\\inc\\waverunner\\waverunnercharacter.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\coding\\ueprojects\\waverunner 5.0\\intermediate\\build\\win64\\waverunnereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "PCH": "d:\\coding\\waverunner\\intermediate\\build\\win64\\waverunnereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
         "Includes": [
-            "d:\\coding\\ueprojects\\waverunner 5.0\\intermediate\\build\\win64\\unrealeditor\\development\\waverunner\\definitions.waverunner.h",
-            "d:\\coding\\ueprojects\\waverunner 5.0\\source\\waverunner\\waverunnercharacter.h",
+            "d:\\coding\\waverunner\\intermediate\\build\\win64\\unrealeditor\\development\\waverunner\\definitions.waverunner.h",
+            "d:\\coding\\waverunner\\source\\waverunner\\waverunnercharacter.h",
             "d:\\ue_5.0\\engine\\plugins\\2d\\paper2d\\source\\paper2d\\classes\\papercharacter.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
@@ -15,7 +15,7 @@
             "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\rootmotionsource.generated.h",
             "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\character.generated.h",
             "d:\\ue_5.0\\engine\\plugins\\2d\\paper2d\\intermediate\\build\\win64\\unrealeditor\\inc\\paper2d\\papercharacter.generated.h",
-            "d:\\coding\\ueprojects\\waverunner 5.0\\intermediate\\build\\win64\\unrealeditor\\inc\\waverunner\\waverunnercharacter.generated.h"
+            "d:\\coding\\waverunner\\intermediate\\build\\win64\\unrealeditor\\inc\\waverunner\\waverunnercharacter.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
