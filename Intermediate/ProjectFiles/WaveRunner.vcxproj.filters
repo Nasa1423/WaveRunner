@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="..\..\WaveRunner.uproject" />
     <Filter Include="Source">
@@ -11,6 +11,7 @@
     <None Include="..\..\Source\WaveRunnerEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\LuosEightElements.png" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -28,6 +29,12 @@
     </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
     </None>
     <Filter Include="Source\WaveRunner">
       <UniqueIdentifier>{C6630699-80DE-30E8-B512-ABE41B19EFC5}</UniqueIdentifier>

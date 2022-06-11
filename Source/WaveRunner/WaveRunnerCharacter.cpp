@@ -23,7 +23,7 @@ AWaveRunnerCharacter::AWaveRunnerCharacter()
 	bUseControllerRotationRoll = false;
 
 	// Set the size of our collision capsule.
-	GetCapsuleComponent()->SetCapsuleHalfHeight(250.0f);
+	GetCapsuleComponent()->SetCapsuleHalfHeight(200.0f);
 	GetCapsuleComponent()->SetCapsuleRadius(100.0f);
 
 	// Create a camera boom attached to the root (capsule)
