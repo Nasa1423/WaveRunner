@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "WaveRunner",
-			"Path": "D:\\Coding\\UEProjects\\WaveRunner 5.0\\Source\\WaveRunner.Target.cs",
+			"Path": "D:\\HSE stuff\\WR\\WaveRunner\\Source\\WaveRunner.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "WaveRunnerEditor",
-			"Path": "D:\\Coding\\UEProjects\\WaveRunner 5.0\\Source\\WaveRunnerEditor.Target.cs",
+			"Path": "D:\\HSE stuff\\WR\\WaveRunner\\Source\\WaveRunnerEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
