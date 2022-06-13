@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Components/SplineComponent.h"
-#include "Components/CapsuleComponent.h"
+#include "Components/BoxComponent.h"
 #include "SpikeTrap.generated.h"
 
 UCLASS()
@@ -29,7 +29,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 		USplineComponent* SplineComponent;
 	UPROPERTY(VisibleAnywhere)
-		UCapsuleComponent* TriggerBox;
+		UBoxComponent* TriggerBox;
 	UFUNCTION()
-		int callback(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+		void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 };

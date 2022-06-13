@@ -2,6 +2,7 @@
 
 
 #include "SpikeTrap.h"
+#include "Runtime/Engine/Public/EngineGlobals.h"
 
 // Sets default values
 ASpikeTrap::ASpikeTrap()
@@ -15,17 +16,18 @@ ASpikeTrap::ASpikeTrap()
 	SplineComponent->SetupAttachment(RootComponent);
 	SpikeMesh->SetupAttachment(SplineComponent);
 
-	TriggerBox = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Trigger Capsule"));
-	TriggerBox->InitCapsuleSize(55.f, 96.0f);;
-	TriggerBox->SetCollisionProfileName(TEXT("Trigger"));
+	TriggerBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Trigger Box"));
 	TriggerBox->SetupAttachment(RootComponent);
+	TriggerBox->InitBoxExtent(FVector(500.0f, 500.0f, 500.0f));
+	TriggerBox->SetRelativeLocation(FVector(0.0f, 0.0f, 100.0f));
+	TriggerBox->SetCollisionProfileName(TEXT("Trigger"));
 
-	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &ASpikeTrap::callback);
+	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &ASpikeTrap::OnOverlapBegin);
 
 
 }
-int ASpikeTrap::callback(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
-
+void ASpikeTrap::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
+	GEngine->AddOnScreenDebugMessage(-1, 12.f, FColor::White, TEXT("Simple message"));
 }
 
 // Called when the game starts or when spawned
