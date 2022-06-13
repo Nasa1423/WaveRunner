@@ -39,12 +39,18 @@ protected:
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 	class UPaperFlipbook* IdleAnimation;
+	
+	// The animation to attack (shot lazers)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* AttackAnimation;
 
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
 
 	/** Called for side to side input */
 	void MoveRight(float Value);
+
+	void Lazershot();
 
 	void UpdateCharacter();
 

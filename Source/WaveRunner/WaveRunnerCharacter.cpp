@@ -110,6 +110,8 @@ void AWaveRunnerCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AWaveRunnerCharacter::MoveRight);
+	PlayerInputComponent->BindAction("Lazershot", IE_Pressed, this, &AWaveRunnerCharacter::Lazershot);
+
 }
 
 void AWaveRunnerCharacter::MoveRight(float Value)
@@ -118,6 +120,28 @@ void AWaveRunnerCharacter::MoveRight(float Value)
 
 	// Apply the input to the character motion
 	AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value);
+}
+
+void AWaveRunnerCharacter::Lazershot()
+{
+	/*
+	UWorld* World = GetWorld();
+	if (World)
+	{
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = GetInstigator();
+
+		// Spawn the projectile at the muzzle.
+		ALazerball* Lazerball = World->SpawnActor<ALazerball>(ProjectileClass, MuzzleLocation, MuzzleRotation, SpawnParams);
+		if (Projectile)
+		{
+			// Set the projectile's initial trajectory.
+			FVector LaunchDirection = MuzzleRotation.Vector();
+			Projectile->FireInDirection(LaunchDirection);
+		}
+	}
+	*/
 }
 
 void AWaveRunnerCharacter::UpdateCharacter()
