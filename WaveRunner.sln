@@ -7,51 +7,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{233774
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{DE1F8B53-6C02-3C13-9101-A7C8D96F3FF6}"
 EndProject
-<<<<<<< Updated upstream
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WaveRunner", "Intermediate\ProjectFiles\WaveRunner.vcxproj", "{4A22C323-948B-3417-9F18-F0EF835E1BEE}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UE5", "Intermediate\ProjectFiles\UE5.vcxproj", "{FE7CC564-942E-31CE-A19C-17D1443090EA}"
-=======
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WaveRunner", "Intermediate\ProjectFiles\WaveRunner.vcxproj", "{9A2705D0-870F-31ED-A37F-5CF11BAE9AA5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UE5", "Intermediate\ProjectFiles\UE5.vcxproj", "{34FCF8BE-B58C-3426-B133-220453C46F91}"
->>>>>>> Stashed changes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualizers", "Visualizers", "{1CCEC849-CC72-4C59-8C36-2F7C38706D4C}"
 	ProjectSection(SolutionItems) = preProject
-		D:\UE_5.0\Engine\Extras\VisualStudioDebugging\Unreal.natvis = D:\UE_5.0\Engine\Extras\VisualStudioDebugging\Unreal.natvis
+		..\..\..\Epic Games\UE_5.0\Engine\Extras\VisualStudioDebugging\Unreal.natvis = ..\..\..\Epic Games\UE_5.0\Engine\Extras\VisualStudioDebugging\Unreal.natvis
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DebugGame Editor|IOS = DebugGame Editor|IOS
 		DebugGame Editor|Win64 = DebugGame Editor|Win64
+		DebugGame|IOS = DebugGame|IOS
 		DebugGame|Win64 = DebugGame|Win64
+		Development Editor|IOS = Development Editor|IOS
 		Development Editor|Win64 = Development Editor|Win64
+		Development|IOS = Development|IOS
 		Development|Win64 = Development|Win64
+		Shipping|IOS = Shipping|IOS
 		Shipping|Win64 = Shipping|Win64
 	EndGlobalSection
 	# UnrealVS Section
 	GlobalSection(ddbf523f-7eb6-4887-bd51-85a714ff87eb) = preSolution
-		AvailablePlatforms=Win64
+		AvailablePlatforms=Win64;IOS
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-<<<<<<< Updated upstream
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE}.DebugGame Editor|Win64.ActiveCfg = DebugGame_Editor|x64
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE}.DebugGame Editor|Win64.Build.0 = DebugGame_Editor|x64
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE}.DebugGame|Win64.ActiveCfg = DebugGame|x64
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE}.DebugGame|Win64.Build.0 = DebugGame|x64
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE}.Development Editor|Win64.ActiveCfg = Development_Editor|x64
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE}.Development Editor|Win64.Build.0 = Development_Editor|x64
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE}.Development|Win64.ActiveCfg = Development|x64
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE}.Development|Win64.Build.0 = Development|x64
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE}.Shipping|Win64.ActiveCfg = Shipping|x64
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE}.Shipping|Win64.Build.0 = Shipping|x64
-		{FE7CC564-942E-31CE-A19C-17D1443090EA}.DebugGame Editor|Win64.ActiveCfg = BuiltWithUnrealBuildTool|Win64
-		{FE7CC564-942E-31CE-A19C-17D1443090EA}.DebugGame|Win64.ActiveCfg = BuiltWithUnrealBuildTool|Win64
-		{FE7CC564-942E-31CE-A19C-17D1443090EA}.Development Editor|Win64.ActiveCfg = BuiltWithUnrealBuildTool|Win64
-		{FE7CC564-942E-31CE-A19C-17D1443090EA}.Development|Win64.ActiveCfg = BuiltWithUnrealBuildTool|Win64
-		{FE7CC564-942E-31CE-A19C-17D1443090EA}.Shipping|Win64.ActiveCfg = BuiltWithUnrealBuildTool|Win64
-=======
 		{9A2705D0-870F-31ED-A37F-5CF11BAE9AA5}.DebugGame Editor|IOS.ActiveCfg = Invalid|x64
 		{9A2705D0-870F-31ED-A37F-5CF11BAE9AA5}.DebugGame Editor|Win64.ActiveCfg = DebugGame_Editor|x64
 		{9A2705D0-870F-31ED-A37F-5CF11BAE9AA5}.DebugGame Editor|Win64.Build.0 = DebugGame_Editor|x64
@@ -80,18 +62,12 @@ Global
 		{34FCF8BE-B58C-3426-B133-220453C46F91}.Development|Win64.ActiveCfg = BuiltWithUnrealBuildTool|Win64
 		{34FCF8BE-B58C-3426-B133-220453C46F91}.Shipping|IOS.ActiveCfg = BuiltWithUnrealBuildTool|Win64
 		{34FCF8BE-B58C-3426-B133-220453C46F91}.Shipping|Win64.ActiveCfg = BuiltWithUnrealBuildTool|Win64
->>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-<<<<<<< Updated upstream
-		{FE7CC564-942E-31CE-A19C-17D1443090EA} = {233774A8-CC9D-3FA9-86D1-90573E92B704}
-		{4A22C323-948B-3417-9F18-F0EF835E1BEE} = {DE1F8B53-6C02-3C13-9101-A7C8D96F3FF6}
-=======
 		{34FCF8BE-B58C-3426-B133-220453C46F91} = {233774A8-CC9D-3FA9-86D1-90573E92B704}
 		{9A2705D0-870F-31ED-A37F-5CF11BAE9AA5} = {DE1F8B53-6C02-3C13-9101-A7C8D96F3FF6}
->>>>>>> Stashed changes
 	EndGlobalSection
 EndGlobal
