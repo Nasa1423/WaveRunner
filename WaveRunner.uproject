@@ -9,12 +9,8 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-<<<<<<< Updated upstream
-				"Engine"
-=======
 				"Engine",
 				"Paper2D"
->>>>>>> Stashed changes
 			]
 		}
 	],
