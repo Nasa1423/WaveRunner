@@ -16,10 +16,20 @@ class WAVERUNNER_API ASpikeTrap : public AActor
 public:	
 	// Sets default values for this actor's properties
 	ASpikeTrap();
-
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(EditAnywhere, Category = "SplineController")
+	float TotalPathTimeController;
+
+	UPROPERTY(EditAnywhere, Category = "SplineController")
+	bool bSplineInLoop;
+
+	bool bCanMoveActor;
+
+	float StartTime;
 
 public:	
 	// Called every frame
@@ -30,6 +40,7 @@ public:
 		USplineComponent* SplineComponent;
 	UPROPERTY(VisibleAnywhere)
 		UBoxComponent* TriggerBox;
+
 	UFUNCTION()
 		void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 };

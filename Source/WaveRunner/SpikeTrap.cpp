@@ -13,16 +13,20 @@ ASpikeTrap::ASpikeTrap()
 	SpikeMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MY_FUCKING_SPIKE"));
 
 	SplineComponent = CreateDefaultSubobject<USplineComponent>(TEXT("SPLINE_BLYAT"));
-	SplineComponent->SetupAttachment(RootComponent);
+	//SplineComponent->SetupAttachment(RootComponent);
+	SplineComponent->AttachToComponent(RootComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
+	SplineComponent->Duration = TotalPathTimeController;
 	SpikeMesh->SetupAttachment(SplineComponent);
 
 	TriggerBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Trigger Box"));
-	TriggerBox->SetupAttachment(RootComponent);
-	TriggerBox->InitBoxExtent(FVector(500.0f, 500.0f, 500.0f));
-	TriggerBox->SetRelativeLocation(FVector(0.0f, 0.0f, 100.0f));
+	TriggerBox->AttachToComponent(RootComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
+	TriggerBox->InitBoxExtent(FVector(100.0f, 100.0f, 100.0f));
+	//TriggerBox->SetRelativeLocation(FVector(0.0f, 0.0f, 100.0f));
 	TriggerBox->SetCollisionProfileName(TEXT("Trigger"));
 
 	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &ASpikeTrap::OnOverlapBegin);
+
+	StartTime = 0;
 
 
 }
@@ -34,6 +38,8 @@ void ASpikeTrap::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
 void ASpikeTrap::BeginPlay()
 {
 	Super::BeginPlay();
+
+	StartTime = GetWorld()->GetTimeSeconds();
 	
 }
 
@@ -42,5 +48,30 @@ void ASpikeTrap::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	float CurrentSplineTime = (GetWorld()->GetTimeSeconds() - StartTime) / TotalPathTimeController;
+
+	float Distance = SplineComponent->GetSplineLength() * CurrentSplineTime;
+
+	// World position 
+
+	FVector Position = SplineComponent->GetLocationAtDistanceAlongSpline(Distance, ESplineCoordinateSpace::World);
+	SpikeMesh->SetRelativeLocation(Position);
+
+	// World Rotation 
+	FVector Direction = SplineComponent->GetLocationAtDistanceAlongSpline(Distance, ESplineCoordinateSpace::World);
+	// Create rotator
+	FRotator Rotator = FRotationMatrix::MakeFromX(Direction).Rotator();
+	SpikeMesh->SetRelativeRotation(Rotator);
+
+	//Reach the end
+	if (CurrentSplineTime >= 1.0f) {
+		if (bSplineInLoop) {
+			bCanMoveActor = true;
+
+			StartTime = GetWorld()->GetTimeSeconds();
+
+			CurrentSplineTime = (GetWorld()->GetTimeSeconds() - StartTime) / TotalPathTimeController;
+		}
+	}
 }
 
