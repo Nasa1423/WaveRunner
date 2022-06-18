@@ -50,3 +50,8 @@ void ALazerball::BeginPlay()
     Super::BeginPlay();
 
 }
+
+void ALazerball::FireInDirection(const FVector& ShootDirection)
+{
+    ProjectileMovementComponent->Velocity = ShootDirection * ProjectileMovementComponent->InitialSpeed;
+}
