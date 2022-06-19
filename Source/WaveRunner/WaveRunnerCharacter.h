@@ -45,11 +45,11 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 	class UPaperFlipbook* AttackAnimation;
 
-	UPROPERTY(EditAnywhere, Category = Projectile)
-	TSubclassOf<class ALazerball> Lazerball;
+	//UPROPERTY(EditAnywhere, Category = Projectile)
+	//TSubclassOf<class ALazerball> Lazerball;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-	FVector MuzzleOffset;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+	//FVector MuzzleOffset;
 
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
