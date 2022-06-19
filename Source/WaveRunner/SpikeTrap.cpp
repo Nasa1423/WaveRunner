@@ -15,12 +15,12 @@ ASpikeTrap::ASpikeTrap()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	SpikeMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MY_FUCKING_SPIKE"));
-
 	SplineComponent = CreateDefaultSubobject<USplineComponent>(TEXT("SPLINE_BLYAT"));
 	//SplineComponent->SetupAttachment(RootComponent);
 	SplineComponent->AttachToComponent(RootComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
 	SplineComponent->Duration = TotalPathTimeController;
+
+	SpikeMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MY_FUCKING_SPIKE"));
 	SpikeMesh->SetupAttachment(SplineComponent);
 
 	CurrentLocation = SpikeMesh->GetComponentLocation();
