@@ -40,6 +40,9 @@ protected:
 	// The animation to play while idle (standing still)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
 	class UPaperFlipbook* IdleAnimation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+		class UPaperFlipbook* DeathAnimation;
 	
 	// The animation to attack (shot lazers)
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
@@ -61,12 +64,16 @@ protected:
 
 	void UpdateCharacter();
 
+	UFUNCTION()
+	void Suicide();
+
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
 
 public:
 	AWaveRunnerCharacter();
+
 
 	/** Returns SideViewCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetSideViewCameraComponent() const { return SideViewCameraComponent; }
