@@ -34,7 +34,7 @@ AWaveRunnerCharacter::AWaveRunnerCharacter()
 	CameraBoom->SetUsingAbsoluteRotation(true);
 	CameraBoom->bDoCollisionTest = false;
 	CameraBoom->SetRelativeRotation(FRotator(0.0f, -80.0f, 0.0f));
-
+	//CameraBoom->GetActorRotation(FRotator();
 
 	// Create an orthographic camera (no perspective) and attach it to the boom
 	SideViewCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("SideViewCamera"));
@@ -92,7 +92,6 @@ void AWaveRunnerCharacter::UpdateAnimation()
 	{
 		GetSprite()->SetFlipbook(DesiredAnimation);
 	}
-
 }
 
 void AWaveRunnerCharacter::Tick(float DeltaSeconds)
@@ -101,7 +100,6 @@ void AWaveRunnerCharacter::Tick(float DeltaSeconds)
 
 	UpdateCharacter();
 }
-
 
 //////////////////////////////////////////////////////////////////////////
 // Input
@@ -113,7 +111,6 @@ void AWaveRunnerCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AWaveRunnerCharacter::MoveRight);
 	PlayerInputComponent->BindAction("Lazershot", IE_Pressed, this, &AWaveRunnerCharacter::Lazershot);
-
 }
 
 void AWaveRunnerCharacter::MoveRight(float Value)
@@ -148,15 +145,9 @@ void AWaveRunnerCharacter::UpdateCharacter()
 
 void AWaveRunnerCharacter::Lazershot()
 {
-	//UPaperFlipbook* DesiredAnimation = (PlayerSpeedSqr > 0.0f) ? RunningAnimation : IdleAnimation;
-	//zalupa dlya animation 
-
-	GEngine->AddOnScreenDebugMessage(-1, 12.f, FColor::White, TEXT("Simple message"));
-	// Attempt to fire a projectile.
-	UE_LOG(LogTemp, Warning, TEXT("XyiXyiXyiXyiXyi"));
-
-
-	FVector CharLoc = GetActorLocation();
+	FVector CharLoc = this->GetActorLocation();
+	FString LCharLoc = CharLoc.ToString();
+	GEngine->AddOnScreenDebugMessage(-1, 12.f, FColor::White, TEXT(CharLoc));
 	CharLoc.Z += 70.0f;
 
 	const FVector PlayerVelocity = GetVelocity();
@@ -178,19 +169,17 @@ void AWaveRunnerCharacter::Lazershot()
 		SpawnParams.Owner = this;
 		SpawnParams.Instigator = GetInstigator();
 
-		// Spawn the projectile at the muzzle.
-		ALazerball* Lazerball = GetWorld()->SpawnActor<ALazerball>(ALazerball::StaticClass(), CharLoc, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+		ALazerball* Lazerball = GetWorld()->SpawnActor<ALazerball>(ALazerball::StaticClass(), CharLoc, GetActorRotation(), SpawnParams);
 		if (Lazerball)
 		{
-			// Set the projectile's initial trajectory.
 			Lazerball->FireInDirection(CharLoc);
 
 		}
-
 	}
 }
 
-void AWaveRunnerCharacter::Suicide() {
+void AWaveRunnerCharacter::Suicide() 
+{
 	DisableInput(Cast<APlayerController>(this));
 	GetSprite()->SetFlipbook(DeathAnimation);
 

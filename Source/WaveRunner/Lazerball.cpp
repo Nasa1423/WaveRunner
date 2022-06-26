@@ -24,7 +24,6 @@ ALazerball::ALazerball()
         // Set the root component to be the collision component.
         RootComponent = CollisionComponent;
     }
-    //GetSprite()->SetFlipbook(ProjectileAnimation);
     if (!ProjectileMovementComponent)
     {
         ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
@@ -37,12 +36,12 @@ ALazerball::ALazerball()
         ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
     }
     InitialLifeSpan = 3.0f;
+    UPaperFlipbookComponent* comp = GetRenderComponent();
 };
 
 void ALazerball::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
-
 }
 
 void ALazerball::BeginPlay()
