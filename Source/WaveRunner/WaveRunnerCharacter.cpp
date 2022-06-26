@@ -186,3 +186,9 @@ void AWaveRunnerCharacter::Lazershot()
 		
 	}
 }
+
+void AWaveRunnerCharacter::Suicide() {
+	DisableInput(Cast<APlayerController>(this));
+	GetSprite()->SetFlipbook(DeathAnimation);
+
+}
