@@ -16,7 +16,9 @@ You need to become the chosen one and save humanity from it. </n>
 ![image](https://user-images.githubusercontent.com/54882967/175833664-964d0ff1-5da8-47bf-8e58-c2ee4b02f82e.png)
 
 <n><b>Docs, used for realising the project:</b></n>
+
 <n>fps shooter guide: https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/ProgrammingWithCPP/CPPTutorials/FirstPersonShooter/ </n>
+
 <n>for spline component: http://jollymonsterstudio.com/2021/10/01/unreal-engine-c-fundamentals-moving-static-meshes-along-a-spline-component/ </n>
 
 
