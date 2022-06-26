@@ -19,28 +19,26 @@ class WAVERUNNER_API ALazerball : public APaperFlipbookActor
 {
 	GENERATED_BODY()
 	
-
 protected:
 	virtual void BeginPlay() override;
 
 public:
 	virtual void Tick(float DeltaSeconds) override;
 
-UPROPERTY(VisibleDefaultsOnly, Category = Projectile)
-USphereComponent* CollisionComponent;
-	protected:
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = Projectile)
+	USphereComponent* CollisionComponent;
+	//protected:
 	// Fireball animation
-		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
-		class UPaperFlipbook* ProjectileAnimation;
-	protected:
-		UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Movement)
-		class UProjectileMovementComponent* ProjectileMovementComponent;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+	class UPaperFlipbook* ProjectileAnimation;
+	//protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Movement)
+	class UProjectileMovementComponent* ProjectileMovementComponent;
 	
 	void FireInDirection(const FVector& ShootDirection);
 
 public:
 	ALazerball();
-	ALazerball(bool isRight);
-
+	//ALazerball(bool isRight);
 
 };
