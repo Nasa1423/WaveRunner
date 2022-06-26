@@ -25,6 +25,7 @@ protected:
 public:
 	virtual void Tick(float DeltaSeconds) override;
 
+
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = Projectile)
 	USphereComponent* CollisionComponent;
 	//protected:

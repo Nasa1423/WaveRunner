@@ -37,11 +37,17 @@ ALazerball::ALazerball()
         ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
     }
     InitialLifeSpan = 3.0f;
+    UPaperFlipbookComponent* comp = GetRenderComponent();
 };
 
 void ALazerball::Tick(float DeltaSeconds)
 {
+    
     Super::Tick(DeltaSeconds);
+    //FString Loc = GetActorLocation().ToString();
+    //GEngine->AddOnScreenDebugMessage(-1, 12.f, FColor::White, TEXT(oc));
+
+    //GetActorLocation
 
 }
 
