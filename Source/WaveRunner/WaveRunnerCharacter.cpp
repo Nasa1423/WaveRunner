@@ -156,14 +156,14 @@ void AWaveRunnerCharacter::Lazershot()
 
 		// Set MuzzleOffset to spawn projectiles slightly in front of the camera.
 		MuzzleOffset.Set(100.0f, 0.0f, 0.0f);
-		
+
 		// Transform MuzzleOffset from camera space to world space.
 		FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
 
 		// Skew the aim to be slightly upwards.
 		FRotator MuzzleRotation = CameraRotation;
 		MuzzleRotation.Pitch += 10.0f;
-		
+
 		UWorld* World = GetWorld();
 		if (World)
 		{
@@ -172,12 +172,13 @@ void AWaveRunnerCharacter::Lazershot()
 			SpawnParams.Instigator = GetInstigator();
 
 			// Spawn the projectile at the muzzle.
-			ALazerball* Lazerball = World->SpawnActor<ALazerball>(MuzzleLocation, MuzzleRotation, SpawnParams);
-			if (Lazerball)
-			{
+			//ALazerball* Lazerball = World->SpawnActor<ALazerball>(MuzzleLocation, MuzzleRotation, SpawnParams);
+			//if (Lazerball)
+			//{
 				// Set the projectile's initial trajectory.
-				FVector LaunchDirection = MuzzleRotation.Vector();
-				Lazerball->FireInDirection(LaunchDirection);
-			}
+			//	FVector LaunchDirection = MuzzleRotation.Vector();
+				//Lazerball->FireInDirection(LaunchDirection);
+			//}
 		}
+	}
 }
