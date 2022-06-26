@@ -87,18 +87,18 @@ void AWaveRunnerCharacter::UpdateAnimation()
 
 	// Are we moving or standing still?
 	UPaperFlipbook* DesiredAnimation = (PlayerSpeedSqr > 0.0f) ? RunningAnimation : IdleAnimation;
-	if( GetSprite()->GetFlipbook() != DesiredAnimation 	)
+	if (GetSprite()->GetFlipbook() != DesiredAnimation)
 	{
 		GetSprite()->SetFlipbook(DesiredAnimation);
 	}
-	
+
 }
 
 void AWaveRunnerCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	
-	UpdateCharacter();	
+
+	UpdateCharacter();
 }
 
 
@@ -129,7 +129,7 @@ void AWaveRunnerCharacter::UpdateCharacter()
 	UpdateAnimation();
 
 	// Now setup the rotation of the controller based on the direction we are travelling
-	const FVector PlayerVelocity = GetVelocity();	
+	const FVector PlayerVelocity = GetVelocity();
 	float TravelDirection = PlayerVelocity.X;
 	// Set the rotation so that the character faces his direction of travel.
 	if (Controller != nullptr)
@@ -146,7 +146,7 @@ void AWaveRunnerCharacter::UpdateCharacter()
 }
 
 void AWaveRunnerCharacter::Lazershot()
-{	
+{
 	//UPaperFlipbook* DesiredAnimation = (PlayerSpeedSqr > 0.0f) ? RunningAnimation : IdleAnimation;
 	//zalupa dlya animation 
 
@@ -156,11 +156,11 @@ void AWaveRunnerCharacter::Lazershot()
 
 
 	FVector CharLoc = GetActorLocation();
-	CharLoc.Z += 70.0f; 
+	CharLoc.Z += 70.0f;
 
 	const FVector PlayerVelocity = GetVelocity();
 	float TravelDirection = PlayerVelocity.X;
-		
+
 	if (TravelDirection < 0.0f)
 	{
 		CharLoc.X += 230.0f;
@@ -176,7 +176,7 @@ void AWaveRunnerCharacter::Lazershot()
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = this;
 		SpawnParams.Instigator = GetInstigator();
-			
+
 		// Spawn the projectile at the muzzle.
 		ALazerball* Lazerball = GetWorld()->SpawnActor<ALazerball>(ALazerball::StaticClass(), CharLoc, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
 		if (Lazerball)
@@ -185,7 +185,7 @@ void AWaveRunnerCharacter::Lazershot()
 			Lazerball->FireInDirection(CharLoc);
 
 		}
-		
+
 	}
 }
 

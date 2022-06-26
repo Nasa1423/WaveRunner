@@ -19,12 +19,12 @@ public:
 	ASpikeTrap();
 
 private:
-	FVector CurrentLocation;
-	float speed;
-	bool bIsMoving;
-	float requestedHeight;
-	UPROPERTY(EditAnywhere, Category = "Custom")
-		double LinearSpeed;
+	//FVector CurrentLocation;
+	//float speed;
+	//bool bIsMoving;
+	//float requestedHeight;
+	//UPROPERTY(EditAnywhere, Category = "Custom")
+		//double LinearSpeed;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -47,10 +47,10 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION()
-		void ProcessMovementTimeline();
+		void ProcessMovementTimeline(float value);
 
 	UFUNCTION()
-		void OnEndMovementTimeline(); 
+		void OnEndMovementTimeline();
 
 	UFUNCTION()
 		void TriggerBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
@@ -58,22 +58,15 @@ public:
 	UFUNCTION()
 		void TriggerEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
-	//UFUNCTION()
-		//void moveUp(float points);
-
-
-
 public:
 	UPROPERTY(VisibleAnywhere)
-		UStaticMeshComponent* SpikeMesh;
-	UPROPERTY(VisibleAnywhere)
 		USplineComponent* SplineComponent;
+	UPROPERTY(VisibleAnywhere)
+		UStaticMeshComponent* MeshComponent;
 	UPROPERTY(VisibleAnywhere)
 		UBoxComponent* TriggerBox;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Spline", meta = (AllowPrivateAccess = "true"))
 		UCurveFloat* MovementCurve;
-	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SplineEdit", meta = (AllowPrivateAccess = "true"))
-		//int data;
 	
 
 	UFUNCTION()
@@ -81,5 +74,4 @@ public:
 
 private:
 	FTimeline MovementTimeline;
-	//FOnTimelineFloat ProgressFunction;
 };
