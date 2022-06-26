@@ -23,6 +23,11 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
+    /**
+    * Default tick function
+    *
+    * \param float DeltaSeconds Defines how much seconds does tick take
+    */
 	virtual void Tick(float DeltaSeconds) override;
 
 
@@ -35,7 +40,12 @@ public:
 	//protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Movement)
 	class UProjectileMovementComponent* ProjectileMovementComponent;
-	
+
+    /**
+    * Function to determine the direction of the shot
+    *
+    * \param vector ShootDirection will help to determine the direction of the shot
+    */
 	void FireInDirection(const FVector& ShootDirection);
 
 public:

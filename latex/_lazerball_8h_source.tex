@@ -1,0 +1,50 @@
+\hypertarget{_lazerball_8h_source}{}\doxysection{Lazerball.\+h}
+\label{_lazerball_8h_source}\index{Source/WaveRunner/Lazerball.h@{Source/WaveRunner/Lazerball.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// Fill out your copyright notice in the Description page of Project Settings.}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}PaperFlipbookActor.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}GameFramework/ProjectileMovementComponent.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}PaperCharacter.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{//\#include "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}Components/SphereComponent.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}GameFramework/Actor.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}Lazerball.generated.h"{}}}
+\DoxyCodeLine{15  }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 UCLASS(config = Game)}
+\DoxyCodeLine{18 class WAVERUNNER\_API \mbox{\hyperlink{class_a_lazerball}{ALazerball}} : public APaperFlipbookActor}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     GENERATED\_BODY()}
+\DoxyCodeLine{21     }
+\DoxyCodeLine{22 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{23     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} BeginPlay() \textcolor{keyword}{override};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Tick(\textcolor{keywordtype}{float} DeltaSeconds) \textcolor{keyword}{override};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = Projectile)}
+\DoxyCodeLine{34     USphereComponent* CollisionComponent;}
+\DoxyCodeLine{35     \textcolor{comment}{//protected:}}
+\DoxyCodeLine{36     \textcolor{comment}{// Fireball animation}}
+\DoxyCodeLine{37     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)}
+\DoxyCodeLine{38     \textcolor{keyword}{class }UPaperFlipbook* ProjectileAnimation;}
+\DoxyCodeLine{39     \textcolor{comment}{//protected:}}
+\DoxyCodeLine{40     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Movement)}
+\DoxyCodeLine{41     \textcolor{keyword}{class }UProjectileMovementComponent* ProjectileMovementComponent;}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} FireInDirection(\textcolor{keyword}{const} FVector\& ShootDirection);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{keyword}{public}:}
+\DoxyCodeLine{51     \mbox{\hyperlink{class_a_lazerball}{ALazerball}}();}
+\DoxyCodeLine{52     \textcolor{comment}{//ALazerball(bool isRight);}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \};}
+
+\end{DoxyCode}

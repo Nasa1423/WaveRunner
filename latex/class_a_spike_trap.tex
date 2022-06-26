@@ -1,0 +1,121 @@
+\hypertarget{class_a_spike_trap}{}\doxysection{ASpike\+Trap Class Reference}
+\label{class_a_spike_trap}\index{ASpikeTrap@{ASpikeTrap}}
+Inheritance diagram for ASpike\+Trap\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_spike_trap}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_spike_trap_ac7607fc14c7dd6cab7755086c81a7ada}{Tick}} (float Delta\+Time) override
+\item 
+void \mbox{\hyperlink{class_a_spike_trap_a02e1c5b97493dc9f8f3619918ba5785a}{Process\+Movement\+Timeline}} (float value)
+\item 
+void \mbox{\hyperlink{class_a_spike_trap_a0ccdc78e16488cd133d0721fea3cc370}{On\+End\+Movement\+Timeline}} ()
+\item 
+void \mbox{\hyperlink{class_a_spike_trap_a7b68cecad1bc702dc29dc4c3e1163ab4}{Trigger\+Begin\+Overlap}} (UPrimitive\+Component $\ast$Overlapped\+Component, AActor $\ast$Other\+Actor, UPrimitive\+Component $\ast$Other\+Comp, int32 Other\+Body\+Index, bool b\+From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\item 
+void \mbox{\hyperlink{class_a_spike_trap_a234920376d5eaf60bc11b3fa6d088de1}{Trigger\+End\+Overlap}} (UPrimitive\+Component $\ast$Overlapped\+Component, AActor $\ast$Other\+Actor, UPrimitive\+Component $\ast$Other\+Comp, int32 Other\+Body\+Index)
+\item 
+void \mbox{\hyperlink{class_a_spike_trap_a19e14bd83b55e72e06140899ee71557c}{On\+Overlap\+Begin}} (UPrimitive\+Component $\ast$Overlapped\+Comp, AActor $\ast$Other\+Actor, UPrimitive\+Component $\ast$Other\+Comp, int32 Other\+Body\+Index, bool b\+From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_spike_trap_abf2f79f395a8fb25d71e3e6e915cb8f0}\label{class_a_spike_trap_abf2f79f395a8fb25d71e3e6e915cb8f0}} 
+USpline\+Component $\ast$ {\bfseries Spline\+Component}
+\item 
+\mbox{\Hypertarget{class_a_spike_trap_ae3cda9db33905d48fcff915c9a0c462a}\label{class_a_spike_trap_ae3cda9db33905d48fcff915c9a0c462a}} 
+UStatic\+Mesh\+Component $\ast$ {\bfseries Mesh\+Component}
+\item 
+\mbox{\Hypertarget{class_a_spike_trap_a1e836b6a38320ec3a1afc6926152b0c0}\label{class_a_spike_trap_a1e836b6a38320ec3a1afc6926152b0c0}} 
+UBox\+Component $\ast$ {\bfseries Trigger\+Box}
+\item 
+\mbox{\Hypertarget{class_a_spike_trap_aba66f74ecca775d855f55b4ad70e3cd3}\label{class_a_spike_trap_aba66f74ecca775d855f55b4ad70e3cd3}} 
+UCurve\+Float $\ast$ {\bfseries Movement\+Curve}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_spike_trap_a64887a87bd2ae328c33783ae892e8bd3}\label{class_a_spike_trap_a64887a87bd2ae328c33783ae892e8bd3}} 
+virtual void {\bfseries Begin\+Play} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_spike_trap_ae925bee2343b8ff63cac6215bbd78a8d}\label{class_a_spike_trap_ae925bee2343b8ff63cac6215bbd78a8d}} 
+UTimeline\+Component $\ast$ {\bfseries Example\+Timeline\+Comp}
+\item 
+\mbox{\Hypertarget{class_a_spike_trap_a446f46a932f98be5850a31d4bbb8b0e9}\label{class_a_spike_trap_a446f46a932f98be5850a31d4bbb8b0e9}} 
+float {\bfseries Total\+Path\+Time\+Controller}
+\item 
+\mbox{\Hypertarget{class_a_spike_trap_a153efcfa7bab8932d9d9be3dd937eb4f}\label{class_a_spike_trap_a153efcfa7bab8932d9d9be3dd937eb4f}} 
+bool {\bfseries b\+Spline\+In\+Loop}
+\item 
+\mbox{\Hypertarget{class_a_spike_trap_a7f36fabbd8d56ca1d28454b11fdf20b0}\label{class_a_spike_trap_a7f36fabbd8d56ca1d28454b11fdf20b0}} 
+bool {\bfseries b\+Can\+Move\+Actor}
+\item 
+\mbox{\Hypertarget{class_a_spike_trap_a9ad4c590d0826795129c127b4b447d31}\label{class_a_spike_trap_a9ad4c590d0826795129c127b4b447d31}} 
+float {\bfseries Start\+Time}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_spike_trap_a0ccdc78e16488cd133d0721fea3cc370}\label{class_a_spike_trap_a0ccdc78e16488cd133d0721fea3cc370}} 
+\index{ASpikeTrap@{ASpikeTrap}!OnEndMovementTimeline@{OnEndMovementTimeline}}
+\index{OnEndMovementTimeline@{OnEndMovementTimeline}!ASpikeTrap@{ASpikeTrap}}
+\doxysubsubsection{\texorpdfstring{OnEndMovementTimeline()}{OnEndMovementTimeline()}}
+{\footnotesize\ttfamily void ASpike\+Trap\+::\+On\+End\+Movement\+Timeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Event that will be executed on timeline movement end \mbox{\Hypertarget{class_a_spike_trap_a19e14bd83b55e72e06140899ee71557c}\label{class_a_spike_trap_a19e14bd83b55e72e06140899ee71557c}} 
+\index{ASpikeTrap@{ASpikeTrap}!OnOverlapBegin@{OnOverlapBegin}}
+\index{OnOverlapBegin@{OnOverlapBegin}!ASpikeTrap@{ASpikeTrap}}
+\doxysubsubsection{\texorpdfstring{OnOverlapBegin()}{OnOverlapBegin()}}
+{\footnotesize\ttfamily void ASpike\+Trap\+::\+On\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component $\ast$}]{Overlapped\+Comp,  }\item[{AActor $\ast$}]{Other\+Actor,  }\item[{UPrimitive\+Component $\ast$}]{Other\+Comp,  }\item[{int32}]{Other\+Body\+Index,  }\item[{bool}]{b\+From\+Sweep,  }\item[{const FHit\+Result \&}]{Sweep\+Result }\end{DoxyParamCaption})}
+
+Old function to test Trigger\+Component\+Overlap \mbox{\Hypertarget{class_a_spike_trap_a02e1c5b97493dc9f8f3619918ba5785a}\label{class_a_spike_trap_a02e1c5b97493dc9f8f3619918ba5785a}} 
+\index{ASpikeTrap@{ASpikeTrap}!ProcessMovementTimeline@{ProcessMovementTimeline}}
+\index{ProcessMovementTimeline@{ProcessMovementTimeline}!ASpikeTrap@{ASpikeTrap}}
+\doxysubsubsection{\texorpdfstring{ProcessMovementTimeline()}{ProcessMovementTimeline()}}
+{\footnotesize\ttfamily void ASpike\+Trap\+::\+Process\+Movement\+Timeline (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+Function to change state of timeline
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & value Variable to set timeline state (0 is start and 1 is end) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_spike_trap_ac7607fc14c7dd6cab7755086c81a7ada}\label{class_a_spike_trap_ac7607fc14c7dd6cab7755086c81a7ada}} 
+\index{ASpikeTrap@{ASpikeTrap}!Tick@{Tick}}
+\index{Tick@{Tick}!ASpikeTrap@{ASpikeTrap}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void ASpike\+Trap\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Default tick function
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & Delta\+Seconds Defines how much seconds does tick take \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_spike_trap_a7b68cecad1bc702dc29dc4c3e1163ab4}\label{class_a_spike_trap_a7b68cecad1bc702dc29dc4c3e1163ab4}} 
+\index{ASpikeTrap@{ASpikeTrap}!TriggerBeginOverlap@{TriggerBeginOverlap}}
+\index{TriggerBeginOverlap@{TriggerBeginOverlap}!ASpikeTrap@{ASpikeTrap}}
+\doxysubsubsection{\texorpdfstring{TriggerBeginOverlap()}{TriggerBeginOverlap()}}
+{\footnotesize\ttfamily void ASpike\+Trap\+::\+Trigger\+Begin\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component $\ast$}]{Overlapped\+Component,  }\item[{AActor $\ast$}]{Other\+Actor,  }\item[{UPrimitive\+Component $\ast$}]{Other\+Comp,  }\item[{int32}]{Other\+Body\+Index,  }\item[{bool}]{b\+From\+Sweep,  }\item[{const FHit\+Result \&}]{Sweep\+Result }\end{DoxyParamCaption})}
+
+Event that will be executed when we step on our Trigger\+Component \mbox{\Hypertarget{class_a_spike_trap_a234920376d5eaf60bc11b3fa6d088de1}\label{class_a_spike_trap_a234920376d5eaf60bc11b3fa6d088de1}} 
+\index{ASpikeTrap@{ASpikeTrap}!TriggerEndOverlap@{TriggerEndOverlap}}
+\index{TriggerEndOverlap@{TriggerEndOverlap}!ASpikeTrap@{ASpikeTrap}}
+\doxysubsubsection{\texorpdfstring{TriggerEndOverlap()}{TriggerEndOverlap()}}
+{\footnotesize\ttfamily void ASpike\+Trap\+::\+Trigger\+End\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component $\ast$}]{Overlapped\+Component,  }\item[{AActor $\ast$}]{Other\+Actor,  }\item[{UPrimitive\+Component $\ast$}]{Other\+Comp,  }\item[{int32}]{Other\+Body\+Index }\end{DoxyParamCaption})}
+
+Event that will be executed when we leave our Trigger\+Component 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Wave\+Runner/Spike\+Trap.\+h\item 
+Source/\+Wave\+Runner/Spike\+Trap.\+cpp\end{DoxyCompactItemize}

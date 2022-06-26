@@ -1,0 +1,73 @@
+\hypertarget{_wave_runner_character_8h_source}{}\doxysection{Wave\+Runner\+Character.\+h}
+\label{_wave_runner_character_8h_source}\index{Source/WaveRunner/WaveRunnerCharacter.h@{Source/WaveRunner/WaveRunnerCharacter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// Copyright Epic Games, Inc. All Rights Reserved.}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}PaperCharacter.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Lazerball.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}WaveRunnerCharacter.generated.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }UTextRenderComponent;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{20 UCLASS(config=Game)}
+\DoxyCodeLine{21 class \mbox{\hyperlink{class_a_wave_runner_character}{AWaveRunnerCharacter}} : public APaperCharacter}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     GENERATED\_BODY()}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     }
+\DoxyCodeLine{26     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera, meta=(AllowPrivateAccess=\textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{27     \textcolor{keyword}{class }UCameraComponent* SideViewCameraComponent;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{30     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = \textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{31     \textcolor{keyword}{class }USpringArmComponent* CameraBoom;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     UTextRenderComponent* TextComponent;}
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Tick(\textcolor{keywordtype}{float} DeltaSeconds) \textcolor{keyword}{override};}
+\DoxyCodeLine{40 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{41     \textcolor{comment}{// The animation to play while running around}}
+\DoxyCodeLine{42     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Animations)}
+\DoxyCodeLine{43     \textcolor{keyword}{class }UPaperFlipbook* RunningAnimation;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{comment}{// The animation to play while idle (standing still)}}
+\DoxyCodeLine{46     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)}
+\DoxyCodeLine{47     \textcolor{keyword}{class }UPaperFlipbook* IdleAnimation;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)}
+\DoxyCodeLine{50         \textcolor{keyword}{class }UPaperFlipbook* DeathAnimation;}
+\DoxyCodeLine{51     }
+\DoxyCodeLine{52     \textcolor{comment}{// The animation to attack (shot lazers)}}
+\DoxyCodeLine{53     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)}
+\DoxyCodeLine{54     \textcolor{keyword}{class }UPaperFlipbook* AttackAnimation;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{comment}{//UPROPERTY(EditAnywhere, Category = Projectile)}}
+\DoxyCodeLine{57     \textcolor{comment}{//TSubclassOf<class ALazerball> Lazerball;}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{comment}{//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)}}
+\DoxyCodeLine{60     \textcolor{comment}{//FVector MuzzleOffset;}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} UpdateAnimation();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} MoveRight(\textcolor{keywordtype}{float} Value);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} Lazershot();}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} UpdateCharacter();}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     UFUNCTION()}
+\DoxyCodeLine{89     \textcolor{keywordtype}{void} Suicide();}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{95     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} SetupPlayerInputComponent(\textcolor{keyword}{class} UInputComponent* InputComponent) \textcolor{keyword}{override};}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{keyword}{public}:}
+\DoxyCodeLine{98     \mbox{\hyperlink{class_a_wave_runner_character}{AWaveRunnerCharacter}}();}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 }
+\DoxyCodeLine{102     FORCEINLINE \textcolor{keyword}{class }UCameraComponent* \mbox{\hyperlink{class_a_wave_runner_character_a0a5c8eb9e22150e3500429c70c055f80}{GetSideViewCameraComponent}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} SideViewCameraComponent; \}}
+\DoxyCodeLine{104     FORCEINLINE \textcolor{keyword}{class }USpringArmComponent* \mbox{\hyperlink{class_a_wave_runner_character_ae50cf8f4f7225da6ebe9977fdd03a44a}{GetCameraBoom}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} CameraBoom; \}}
+\DoxyCodeLine{105 \};}
+
+\end{DoxyCode}

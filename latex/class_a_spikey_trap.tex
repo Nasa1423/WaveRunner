@@ -1,0 +1,112 @@
+\hypertarget{class_a_spikey_trap}{}\doxysection{ASpikey\+Trap Class Reference}
+\label{class_a_spikey_trap}\index{ASpikeyTrap@{ASpikeyTrap}}
+Inheritance diagram for ASpikey\+Trap\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_spikey_trap}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_spikey_trap_a465517c9c971785b9b76ff2b815cad1f}{Tick}} (float Delta\+Time) override
+\item 
+void \mbox{\hyperlink{class_a_spikey_trap_a9e88f9c1e080467eef81de8eb5daeda0}{Process\+Movement\+Timeline}} (float Value)
+\item 
+void \mbox{\hyperlink{class_a_spikey_trap_a3bd5e942ffb6896c3bc8f55d866591d0}{On\+End\+Movement\+Timeline}} ()
+\item 
+void \mbox{\hyperlink{class_a_spikey_trap_afcbc336104e68e6e736b6dd2e61e8bbe}{Trigger\+Begin\+Overlap}} (UPrimitive\+Component $\ast$Overlapped\+Component, AActor $\ast$Other\+Actor, UPrimitive\+Component $\ast$Other\+Comp, int32 Other\+Body\+Index, bool b\+From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\item 
+void \mbox{\hyperlink{class_a_spikey_trap_af251e04b4662296f6b99240f5471b837}{Trigger\+End\+Overlap}} (UPrimitive\+Component $\ast$Overlapped\+Component, AActor $\ast$Other\+Actor, UPrimitive\+Component $\ast$Other\+Comp, int32 Other\+Body\+Index)
+\item 
+void \mbox{\hyperlink{class_a_spikey_trap_a6aa7d48f24dc061709b7db9cf9e08ef3}{Mesh\+Begin\+Overlap}} (UPrimitive\+Component $\ast$Overlapped\+Component, AActor $\ast$Other\+Actor, UPrimitive\+Component $\ast$Other\+Comp, int32 Other\+Body\+Index, bool b\+From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_spikey_trap_ad48929658aa5ed1655cbd8f571f5c541}\label{class_a_spikey_trap_ad48929658aa5ed1655cbd8f571f5c541}} 
+USpline\+Component $\ast$ {\bfseries Spline\+Component}
+\item 
+\mbox{\Hypertarget{class_a_spikey_trap_ad55ec993f47b87ce76a642061e41558d}\label{class_a_spikey_trap_ad55ec993f47b87ce76a642061e41558d}} 
+UStatic\+Mesh\+Component $\ast$ {\bfseries Mesh\+Component}
+\item 
+\mbox{\Hypertarget{class_a_spikey_trap_ad2855af934ca0c8c2c020b602aecfa65}\label{class_a_spikey_trap_ad2855af934ca0c8c2c020b602aecfa65}} 
+UBox\+Component $\ast$ {\bfseries Trigger\+Component}
+\item 
+\mbox{\Hypertarget{class_a_spikey_trap_a9b8da2eec1a7a5e9fa90064681cf000a}\label{class_a_spikey_trap_a9b8da2eec1a7a5e9fa90064681cf000a}} 
+UCurve\+Float $\ast$ {\bfseries Movement\+Curve}
+\item 
+\mbox{\Hypertarget{class_a_spikey_trap_a5c9bb09adf9760882cb0a49e8bd05cf4}\label{class_a_spikey_trap_a5c9bb09adf9760882cb0a49e8bd05cf4}} 
+bool {\bfseries b\+Auto\+Activate}
+\item 
+\mbox{\Hypertarget{class_a_spikey_trap_ad515e89d439088eb33b6b025c2827f4e}\label{class_a_spikey_trap_ad515e89d439088eb33b6b025c2827f4e}} 
+bool {\bfseries b\+Reverse\+On\+End\+Timeline}
+\item 
+\mbox{\Hypertarget{class_a_spikey_trap_aab4b42cf9eac30a6cb27fa3e514e1e5d}\label{class_a_spikey_trap_aab4b42cf9eac30a6cb27fa3e514e1e5d}} 
+bool {\bfseries b\+Restart\+On\+End\+Timeline}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_spikey_trap_a9222d17cfd80a18d3b79ee97b7930c31}\label{class_a_spikey_trap_a9222d17cfd80a18d3b79ee97b7930c31}} 
+virtual void {\bfseries Begin\+Play} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_spikey_trap_a6aa7d48f24dc061709b7db9cf9e08ef3}\label{class_a_spikey_trap_a6aa7d48f24dc061709b7db9cf9e08ef3}} 
+\index{ASpikeyTrap@{ASpikeyTrap}!MeshBeginOverlap@{MeshBeginOverlap}}
+\index{MeshBeginOverlap@{MeshBeginOverlap}!ASpikeyTrap@{ASpikeyTrap}}
+\doxysubsubsection{\texorpdfstring{MeshBeginOverlap()}{MeshBeginOverlap()}}
+{\footnotesize\ttfamily void ASpikey\+Trap\+::\+Mesh\+Begin\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component $\ast$}]{Overlapped\+Component,  }\item[{AActor $\ast$}]{Other\+Actor,  }\item[{UPrimitive\+Component $\ast$}]{Other\+Comp,  }\item[{int32}]{Other\+Body\+Index,  }\item[{bool}]{b\+From\+Sweep,  }\item[{const FHit\+Result \&}]{Sweep\+Result }\end{DoxyParamCaption})}
+
+Legacy function to test on begin collision between spikes and player \mbox{\Hypertarget{class_a_spikey_trap_a3bd5e942ffb6896c3bc8f55d866591d0}\label{class_a_spikey_trap_a3bd5e942ffb6896c3bc8f55d866591d0}} 
+\index{ASpikeyTrap@{ASpikeyTrap}!OnEndMovementTimeline@{OnEndMovementTimeline}}
+\index{OnEndMovementTimeline@{OnEndMovementTimeline}!ASpikeyTrap@{ASpikeyTrap}}
+\doxysubsubsection{\texorpdfstring{OnEndMovementTimeline()}{OnEndMovementTimeline()}}
+{\footnotesize\ttfamily void ASpikey\+Trap\+::\+On\+End\+Movement\+Timeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Event that will be executed on timeline movement end \mbox{\Hypertarget{class_a_spikey_trap_a9e88f9c1e080467eef81de8eb5daeda0}\label{class_a_spikey_trap_a9e88f9c1e080467eef81de8eb5daeda0}} 
+\index{ASpikeyTrap@{ASpikeyTrap}!ProcessMovementTimeline@{ProcessMovementTimeline}}
+\index{ProcessMovementTimeline@{ProcessMovementTimeline}!ASpikeyTrap@{ASpikeyTrap}}
+\doxysubsubsection{\texorpdfstring{ProcessMovementTimeline()}{ProcessMovementTimeline()}}
+{\footnotesize\ttfamily void ASpikey\+Trap\+::\+Process\+Movement\+Timeline (\begin{DoxyParamCaption}\item[{float}]{Value }\end{DoxyParamCaption})}
+
+Function to change state of timeline
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & value Variable to set timeline state (0 is start and 1 is end) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_spikey_trap_a465517c9c971785b9b76ff2b815cad1f}\label{class_a_spikey_trap_a465517c9c971785b9b76ff2b815cad1f}} 
+\index{ASpikeyTrap@{ASpikeyTrap}!Tick@{Tick}}
+\index{Tick@{Tick}!ASpikeyTrap@{ASpikeyTrap}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void ASpikey\+Trap\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Default tick function
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & Delta\+Seconds Defines how much seconds does tick take \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_spikey_trap_afcbc336104e68e6e736b6dd2e61e8bbe}\label{class_a_spikey_trap_afcbc336104e68e6e736b6dd2e61e8bbe}} 
+\index{ASpikeyTrap@{ASpikeyTrap}!TriggerBeginOverlap@{TriggerBeginOverlap}}
+\index{TriggerBeginOverlap@{TriggerBeginOverlap}!ASpikeyTrap@{ASpikeyTrap}}
+\doxysubsubsection{\texorpdfstring{TriggerBeginOverlap()}{TriggerBeginOverlap()}}
+{\footnotesize\ttfamily void ASpikey\+Trap\+::\+Trigger\+Begin\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component $\ast$}]{Overlapped\+Component,  }\item[{AActor $\ast$}]{Other\+Actor,  }\item[{UPrimitive\+Component $\ast$}]{Other\+Comp,  }\item[{int32}]{Other\+Body\+Index,  }\item[{bool}]{b\+From\+Sweep,  }\item[{const FHit\+Result \&}]{Sweep\+Result }\end{DoxyParamCaption})}
+
+Event that will be executed when we step on our Trigger\+Component \mbox{\Hypertarget{class_a_spikey_trap_af251e04b4662296f6b99240f5471b837}\label{class_a_spikey_trap_af251e04b4662296f6b99240f5471b837}} 
+\index{ASpikeyTrap@{ASpikeyTrap}!TriggerEndOverlap@{TriggerEndOverlap}}
+\index{TriggerEndOverlap@{TriggerEndOverlap}!ASpikeyTrap@{ASpikeyTrap}}
+\doxysubsubsection{\texorpdfstring{TriggerEndOverlap()}{TriggerEndOverlap()}}
+{\footnotesize\ttfamily void ASpikey\+Trap\+::\+Trigger\+End\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component $\ast$}]{Overlapped\+Component,  }\item[{AActor $\ast$}]{Other\+Actor,  }\item[{UPrimitive\+Component $\ast$}]{Other\+Comp,  }\item[{int32}]{Other\+Body\+Index }\end{DoxyParamCaption})}
+
+Event that will be executed when we leave our Trigger\+Component 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Wave\+Runner/Spikey\+Trap.\+h\item 
+Source/\+Wave\+Runner/Spikey\+Trap.\+cpp\end{DoxyCompactItemize}

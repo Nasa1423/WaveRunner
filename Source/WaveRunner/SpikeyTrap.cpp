@@ -28,6 +28,9 @@ void ASpikeyTrap::BeginPlay()
 	TriggerComponent->OnComponentBeginOverlap.AddDynamic(this, &ASpikeyTrap::TriggerBeginOverlap);
 	TriggerComponent->OnComponentEndOverlap.AddDynamic(this, &ASpikeyTrap::TriggerEndOverlap);
 
+	MeshComponent->OnComponentBeginOverlap.AddDynamic(this, &ASpikeyTrap::MeshBeginOverlap);
+	//MeshComponent->OnComponentEndOverlap.AddDynamic(this, &ASpikeyTrap::TriggerEndOverlap);
+
 	const FVector SplineLocation = SplineComponent->GetLocationAtSplinePoint(0, ESplineCoordinateSpace::World);
 	MeshComponent->SetWorldLocation(SplineLocation);
 
@@ -98,4 +101,8 @@ void ASpikeyTrap::TriggerEndOverlap(UPrimitiveComponent* OverlappedComponent, AA
 	//{
 	//	MovementTimeline.Reverse();
 	//}
+}
+void ASpikeyTrap::MeshBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
+
 }

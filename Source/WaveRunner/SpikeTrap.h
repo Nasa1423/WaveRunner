@@ -26,7 +26,6 @@ private:
 	//UPROPERTY(EditAnywhere, Category = "Custom")
 		//double LinearSpeed;
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -43,19 +42,40 @@ protected:
 	float StartTime;
 
 public:
-	// Called every frame
+    /**
+    * Default tick function
+    *
+    * \param float DeltaSeconds Defines how much seconds does tick take
+    */
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION()
+    /**
+    * Function to change state of timeline
+    *
+    * \param float value Variable to set timeline state (0 is start and 1 is end)
+    */
 		void ProcessMovementTimeline(float value);
 
 	UFUNCTION()
+    /**
+    * Event that will be executed on timeline movement end
+    *
+    */
 		void OnEndMovementTimeline();
 
 	UFUNCTION()
+    /**
+    * Event that will be executed when we step on our TriggerComponent
+    *
+    */
 		void TriggerBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 	UFUNCTION()
+    /**
+    * Event that will be executed when we leave our TriggerComponent
+    *
+    */
 		void TriggerEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 public:
@@ -70,6 +90,10 @@ public:
 	
 
 	UFUNCTION()
+    /**
+    * Old function to test TriggerComponentOverlap
+    *
+    */
 		void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 private:

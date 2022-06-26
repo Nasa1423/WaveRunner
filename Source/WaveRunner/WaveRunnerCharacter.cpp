@@ -81,6 +81,7 @@ AWaveRunnerCharacter::AWaveRunnerCharacter()
 // Animation
 
 void AWaveRunnerCharacter::UpdateAnimation()
+
 {
 	const FVector PlayerVelocity = GetVelocity();
 	const float PlayerSpeedSqr = PlayerVelocity.SizeSquared();
