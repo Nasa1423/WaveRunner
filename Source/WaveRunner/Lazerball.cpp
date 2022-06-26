@@ -24,7 +24,6 @@ ALazerball::ALazerball()
         // Set the root component to be the collision component.
         RootComponent = CollisionComponent;
     }
-    //GetSprite()->SetFlipbook(ProjectileAnimation);
     if (!ProjectileMovementComponent)
     {
         ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
@@ -42,13 +41,7 @@ ALazerball::ALazerball()
 
 void ALazerball::Tick(float DeltaSeconds)
 {
-    
     Super::Tick(DeltaSeconds);
-    //FString Loc = GetActorLocation().ToString();
-    //GEngine->AddOnScreenDebugMessage(-1, 12.f, FColor::White, TEXT(oc));
-
-    //GetActorLocation
-
 }
 
 void ALazerball::BeginPlay()

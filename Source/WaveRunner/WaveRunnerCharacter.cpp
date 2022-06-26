@@ -145,13 +145,6 @@ void AWaveRunnerCharacter::UpdateCharacter()
 
 void AWaveRunnerCharacter::Lazershot()
 {
-	//UPaperFlipbook* DesiredAnimation = (PlayerSpeedSqr > 0.0f) ? RunningAnimation : IdleAnimation;
-	//zalupa dlya animation 
-
-	GEngine->AddOnScreenDebugMessage(-1, 12.f, FColor::White, TEXT("Simple message"));
-	// Attempt to fire a projectile.
-	UE_LOG(LogTemp, Warning, TEXT("XyiXyiXyiXyiXyi"));
-
 	FVector CharLoc = this->GetActorLocation();
 	FString LCharLoc = CharLoc.ToString();
 	GEngine->AddOnScreenDebugMessage(-1, 12.f, FColor::White, TEXT(CharLoc));
@@ -176,18 +169,11 @@ void AWaveRunnerCharacter::Lazershot()
 		SpawnParams.Owner = this;
 		SpawnParams.Instigator = GetInstigator();
 
-		// Spawn the projectile at the muzzle.
-		//FRotator(0.0f, 0.0f, 0.0f)
 		ALazerball* Lazerball = GetWorld()->SpawnActor<ALazerball>(ALazerball::StaticClass(), CharLoc, GetActorRotation(), SpawnParams);
 		if (Lazerball)
 		{
-			// Set the projectile's initial trajectory.
 			Lazerball->FireInDirection(CharLoc);
 
-		}
-		else 
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 12.f, FColor::White, TEXT("xyi v jope"));
 		}
 	}
 }
