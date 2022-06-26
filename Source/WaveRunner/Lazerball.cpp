@@ -29,14 +29,14 @@ ALazerball::ALazerball()
     {
         ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
         ProjectileMovementComponent->SetUpdatedComponent(CollisionComponent);
-        ProjectileMovementComponent->InitialSpeed = 750.0f;
-        ProjectileMovementComponent->MaxSpeed = 1000.0f;
+        ProjectileMovementComponent->InitialSpeed = 1000.0f;
+        ProjectileMovementComponent->MaxSpeed = 1500.0f;
         ProjectileMovementComponent->bRotationFollowsVelocity = true;
         ProjectileMovementComponent->bShouldBounce = true;
         ProjectileMovementComponent->Bounciness = 0.3f;
         ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
     }
-
+    InitialLifeSpan = 3.0f;
 };
 
 void ALazerball::Tick(float DeltaSeconds)

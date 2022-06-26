@@ -153,6 +153,8 @@ void AWaveRunnerCharacter::Lazershot()
 	GEngine->AddOnScreenDebugMessage(-1, 12.f, FColor::White, TEXT("Simple message"));
 	// Attempt to fire a projectile.
 	UE_LOG(LogTemp, Warning, TEXT("XyiXyiXyiXyiXyi"));
+
+
 	FVector CharLoc = GetActorLocation();
 	CharLoc.Z += 70.0f; 
 
