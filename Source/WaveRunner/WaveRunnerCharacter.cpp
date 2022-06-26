@@ -91,6 +91,7 @@ void AWaveRunnerCharacter::UpdateAnimation()
 	{
 		GetSprite()->SetFlipbook(DesiredAnimation);
 	}
+	
 }
 
 void AWaveRunnerCharacter::Tick(float DeltaSeconds)
@@ -145,40 +146,51 @@ void AWaveRunnerCharacter::UpdateCharacter()
 }
 
 void AWaveRunnerCharacter::Lazershot()
-{
+{	
+	//UPaperFlipbook* DesiredAnimation = (PlayerSpeedSqr > 0.0f) ? RunningAnimation : IdleAnimation;
+	//zalupa dlya animation 
+
+	GEngine->AddOnScreenDebugMessage(-1, 12.f, FColor::White, TEXT("Simple message"));
 	// Attempt to fire a projectile.
-	if (Lazerball)
+	UE_LOG(LogTemp, Warning, TEXT("XyiXyiXyiXyiXyi"));
+
+
+	FVector CharLoc = GetActorLocation();
+	CharLoc.Z += 70.0f; 
+
+	const FVector PlayerVelocity = GetVelocity();
+	float TravelDirection = PlayerVelocity.X;
+		
+	if (TravelDirection < 0.0f)
 	{
-		// Get the camera transform.
-		FVector CameraLocation;
-		FRotator CameraRotation;
-		GetActorEyesViewPoint(CameraLocation, CameraRotation);
-
-		// Set MuzzleOffset to spawn projectiles slightly in front of the camera.
-		MuzzleOffset.Set(100.0f, 0.0f, 0.0f);
-
-		// Transform MuzzleOffset from camera space to world space.
-		FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
-
-		// Skew the aim to be slightly upwards.
-		FRotator MuzzleRotation = CameraRotation;
-		MuzzleRotation.Pitch += 10.0f;
-
-		UWorld* World = GetWorld();
-		if (World)
-		{
-			FActorSpawnParameters SpawnParams;
-			SpawnParams.Owner = this;
-			SpawnParams.Instigator = GetInstigator();
-
-			// Spawn the projectile at the muzzle.
-			//ALazerball* Lazerball = World->SpawnActor<ALazerball>(MuzzleLocation, MuzzleRotation, SpawnParams);
-			//if (Lazerball)
-			//{
-				// Set the projectile's initial trajectory.
-			//	FVector LaunchDirection = MuzzleRotation.Vector();
-				//Lazerball->FireInDirection(LaunchDirection);
-			//}
-		}
+		CharLoc.X += 230.0f;
 	}
+	else if (TravelDirection > 0.0f)
+	{
+		CharLoc.X -= 230.f;
+	}
+
+	UWorld* World = GetWorld();
+	if (World)
+	{
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = this;
+		SpawnParams.Instigator = GetInstigator();
+			
+		// Spawn the projectile at the muzzle.
+		ALazerball* Lazerball = GetWorld()->SpawnActor<ALazerball>(ALazerball::StaticClass(), CharLoc, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+		if (Lazerball)
+		{
+			// Set the projectile's initial trajectory.
+			Lazerball->FireInDirection(CharLoc);
+
+		}
+		
+	}
+}
+
+void AWaveRunnerCharacter::Suicide() {
+	DisableInput(Cast<APlayerController>(this));
+	GetSprite()->SetFlipbook(DeathAnimation);
+
 }
