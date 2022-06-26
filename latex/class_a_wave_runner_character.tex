@@ -1,0 +1,118 @@
+\hypertarget{class_a_wave_runner_character}{}\doxysection{AWave\+Runner\+Character Class Reference}
+\label{class_a_wave_runner_character}\index{AWaveRunnerCharacter@{AWaveRunnerCharacter}}
+
+
+{\ttfamily \#include $<$Wave\+Runner\+Character.\+h$>$}
+
+Inheritance diagram for AWave\+Runner\+Character\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_wave_runner_character}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+FORCEINLINE class UCamera\+Component $\ast$ \mbox{\hyperlink{class_a_wave_runner_character_a0a5c8eb9e22150e3500429c70c055f80}{Get\+Side\+View\+Camera\+Component}} () const
+\item 
+FORCEINLINE class USpring\+Arm\+Component $\ast$ \mbox{\hyperlink{class_a_wave_runner_character_ae50cf8f4f7225da6ebe9977fdd03a44a}{Get\+Camera\+Boom}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_wave_runner_character_aa01b23fb0d62036ecc6c8f6d3c1edc95}{Update\+Animation}} ()
+\item 
+void \mbox{\hyperlink{class_a_wave_runner_character_a0cf663ddcc2cc99c4933772048059468}{Move\+Right}} (float Value)
+\item 
+void \mbox{\hyperlink{class_a_wave_runner_character_aab26cdd51cf4cbab52342b3499e18cd9}{Lazershot}} ()
+\item 
+void \mbox{\hyperlink{class_a_wave_runner_character_a264e48ec61ee44826f3fa7f0c68555b6}{Update\+Character}} ()
+\item 
+void \mbox{\hyperlink{class_a_wave_runner_character_a9925f80c5e3c30c189f092fa91c4140f}{Suicide}} ()
+\item 
+virtual void \mbox{\hyperlink{class_a_wave_runner_character_aa4a67cbb1f47a8c12b86b519060e7ac0}{Setup\+Player\+Input\+Component}} (class UInput\+Component $\ast$Input\+Component) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_wave_runner_character_a8edf0bf9faf91169fc8f0472a15968c3}\label{class_a_wave_runner_character_a8edf0bf9faf91169fc8f0472a15968c3}} 
+class UPaper\+Flipbook $\ast$ {\bfseries Running\+Animation}
+\item 
+\mbox{\Hypertarget{class_a_wave_runner_character_a8a743c3560a1477b69935c97c52a76f7}\label{class_a_wave_runner_character_a8a743c3560a1477b69935c97c52a76f7}} 
+class UPaper\+Flipbook $\ast$ {\bfseries Idle\+Animation}
+\item 
+\mbox{\Hypertarget{class_a_wave_runner_character_a767408610fa86d333f09087dfa50d0d3}\label{class_a_wave_runner_character_a767408610fa86d333f09087dfa50d0d3}} 
+class UPaper\+Flipbook $\ast$ {\bfseries Death\+Animation}
+\item 
+\mbox{\Hypertarget{class_a_wave_runner_character_aca148aeb2240b01ca41840a679f7bb7d}\label{class_a_wave_runner_character_aca148aeb2240b01ca41840a679f7bb7d}} 
+class UPaper\+Flipbook $\ast$ {\bfseries Attack\+Animation}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is the default character for \mbox{\hyperlink{class_wave_runner}{Wave\+Runner}}, and it is responsible for all physical interaction between the player and the world.
+
+The capsule component (inherited from ACharacter) handles collision with the world The Character\+Movement\+Component (inherited from ACharacter) handles movement of the collision capsule The Sprite component (inherited from APaper\+Character) handles the visuals 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_wave_runner_character_ae50cf8f4f7225da6ebe9977fdd03a44a}\label{class_a_wave_runner_character_ae50cf8f4f7225da6ebe9977fdd03a44a}} 
+\index{AWaveRunnerCharacter@{AWaveRunnerCharacter}!GetCameraBoom@{GetCameraBoom}}
+\index{GetCameraBoom@{GetCameraBoom}!AWaveRunnerCharacter@{AWaveRunnerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetCameraBoom()}{GetCameraBoom()}}
+{\footnotesize\ttfamily FORCEINLINE class USpring\+Arm\+Component $\ast$ AWave\+Runner\+Character\+::\+Get\+Camera\+Boom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns Camera\+Boom subobject \mbox{\Hypertarget{class_a_wave_runner_character_a0a5c8eb9e22150e3500429c70c055f80}\label{class_a_wave_runner_character_a0a5c8eb9e22150e3500429c70c055f80}} 
+\index{AWaveRunnerCharacter@{AWaveRunnerCharacter}!GetSideViewCameraComponent@{GetSideViewCameraComponent}}
+\index{GetSideViewCameraComponent@{GetSideViewCameraComponent}!AWaveRunnerCharacter@{AWaveRunnerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetSideViewCameraComponent()}{GetSideViewCameraComponent()}}
+{\footnotesize\ttfamily FORCEINLINE class UCamera\+Component $\ast$ AWave\+Runner\+Character\+::\+Get\+Side\+View\+Camera\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns Side\+View\+Camera\+Component subobject \mbox{\Hypertarget{class_a_wave_runner_character_aab26cdd51cf4cbab52342b3499e18cd9}\label{class_a_wave_runner_character_aab26cdd51cf4cbab52342b3499e18cd9}} 
+\index{AWaveRunnerCharacter@{AWaveRunnerCharacter}!Lazershot@{Lazershot}}
+\index{Lazershot@{Lazershot}!AWaveRunnerCharacter@{AWaveRunnerCharacter}}
+\doxysubsubsection{\texorpdfstring{Lazershot()}{Lazershot()}}
+{\footnotesize\ttfamily void AWave\+Runner\+Character\+::\+Lazershot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function to launch projectile \mbox{\Hypertarget{class_a_wave_runner_character_a0cf663ddcc2cc99c4933772048059468}\label{class_a_wave_runner_character_a0cf663ddcc2cc99c4933772048059468}} 
+\index{AWaveRunnerCharacter@{AWaveRunnerCharacter}!MoveRight@{MoveRight}}
+\index{MoveRight@{MoveRight}!AWaveRunnerCharacter@{AWaveRunnerCharacter}}
+\doxysubsubsection{\texorpdfstring{MoveRight()}{MoveRight()}}
+{\footnotesize\ttfamily void AWave\+Runner\+Character\+::\+Move\+Right (\begin{DoxyParamCaption}\item[{float}]{Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function to move the character
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & Value Defines the speed of the character \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_wave_runner_character_aa4a67cbb1f47a8c12b86b519060e7ac0}\label{class_a_wave_runner_character_aa4a67cbb1f47a8c12b86b519060e7ac0}} 
+\index{AWaveRunnerCharacter@{AWaveRunnerCharacter}!SetupPlayerInputComponent@{SetupPlayerInputComponent}}
+\index{SetupPlayerInputComponent@{SetupPlayerInputComponent}!AWaveRunnerCharacter@{AWaveRunnerCharacter}}
+\doxysubsubsection{\texorpdfstring{SetupPlayerInputComponent()}{SetupPlayerInputComponent()}}
+{\footnotesize\ttfamily void AWave\+Runner\+Character\+::\+Setup\+Player\+Input\+Component (\begin{DoxyParamCaption}\item[{class UInput\+Component $\ast$}]{Input\+Component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Function to initialize APawn interface \mbox{\Hypertarget{class_a_wave_runner_character_a9925f80c5e3c30c189f092fa91c4140f}\label{class_a_wave_runner_character_a9925f80c5e3c30c189f092fa91c4140f}} 
+\index{AWaveRunnerCharacter@{AWaveRunnerCharacter}!Suicide@{Suicide}}
+\index{Suicide@{Suicide}!AWaveRunnerCharacter@{AWaveRunnerCharacter}}
+\doxysubsubsection{\texorpdfstring{Suicide()}{Suicide()}}
+{\footnotesize\ttfamily void AWave\+Runner\+Character\+::\+Suicide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function to kill character \mbox{\Hypertarget{class_a_wave_runner_character_aa01b23fb0d62036ecc6c8f6d3c1edc95}\label{class_a_wave_runner_character_aa01b23fb0d62036ecc6c8f6d3c1edc95}} 
+\index{AWaveRunnerCharacter@{AWaveRunnerCharacter}!UpdateAnimation@{UpdateAnimation}}
+\index{UpdateAnimation@{UpdateAnimation}!AWaveRunnerCharacter@{AWaveRunnerCharacter}}
+\doxysubsubsection{\texorpdfstring{UpdateAnimation()}{UpdateAnimation()}}
+{\footnotesize\ttfamily void AWave\+Runner\+Character\+::\+Update\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Called to choose the correct animation to play based on the character\textquotesingle{}s movement state \mbox{\Hypertarget{class_a_wave_runner_character_a264e48ec61ee44826f3fa7f0c68555b6}\label{class_a_wave_runner_character_a264e48ec61ee44826f3fa7f0c68555b6}} 
+\index{AWaveRunnerCharacter@{AWaveRunnerCharacter}!UpdateCharacter@{UpdateCharacter}}
+\index{UpdateCharacter@{UpdateCharacter}!AWaveRunnerCharacter@{AWaveRunnerCharacter}}
+\doxysubsubsection{\texorpdfstring{UpdateCharacter()}{UpdateCharacter()}}
+{\footnotesize\ttfamily void AWave\+Runner\+Character\+::\+Update\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function to control animation 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Wave\+Runner/Wave\+Runner\+Character.\+h\item 
+Source/\+Wave\+Runner/Wave\+Runner\+Character.\+cpp\end{DoxyCompactItemize}

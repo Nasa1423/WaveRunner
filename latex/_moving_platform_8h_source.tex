@@ -1,0 +1,70 @@
+\hypertarget{_moving_platform_8h_source}{}\doxysection{Moving\+Platform.\+h}
+\label{_moving_platform_8h_source}\index{Source/WaveRunner/MovingPlatform.h@{Source/WaveRunner/MovingPlatform.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// Fill out your copyright notice in the Description page of Project Settings.}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}GameFramework/Actor.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Components/SplineComponent.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Components/BoxComponent.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Components/TimelineComponent.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}MovingPlatform.generated.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 UCLASS()}
+\DoxyCodeLine{13 class WAVERUNNER\_API \mbox{\hyperlink{class_a_moving_platform}{AMovingPlatform}} : public AActor}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     GENERATED\_BODY()}
+\DoxyCodeLine{16     }
+\DoxyCodeLine{17 \textcolor{keyword}{public}: }
+\DoxyCodeLine{18     \textcolor{comment}{// Sets default values for this actor's properties}}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_a_moving_platform}{AMovingPlatform}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{22     \textcolor{comment}{// Called when the game starts or when spawned}}
+\DoxyCodeLine{23     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} BeginPlay() \textcolor{keyword}{override};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Tick(\textcolor{keywordtype}{float} DeltaTime) \textcolor{keyword}{override};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     UFUNCTION()}
+\DoxyCodeLine{39         \textcolor{keywordtype}{void} ProcessMovementTimeline(\textcolor{keywordtype}{float} Value);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     UFUNCTION()}
+\DoxyCodeLine{46         \textcolor{keywordtype}{void} OnEndMovementTimeline();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     UFUNCTION()}
+\DoxyCodeLine{53         \textcolor{keywordtype}{void} TriggerBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, \textcolor{keywordtype}{bool} bFromSweep, \textcolor{keyword}{const} FHitResult\& SweepResult);}
+\DoxyCodeLine{54     UFUNCTION()}
+\DoxyCodeLine{59         \textcolor{keywordtype}{void} TriggerEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{public}:}
+\DoxyCodeLine{62     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = \textcolor{stringliteral}{"{}Spline"{}}, meta = (AllowPrivateAccess = \textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{63         USplineComponent* SplineComponent;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = \textcolor{stringliteral}{"{}Spline"{}}, meta = (AllowPrivateAccess = \textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{66         UStaticMeshComponent* MeshComponent;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = \textcolor{stringliteral}{"{}Spline"{}}, meta = (AllowPrivateAccess = \textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{69         UBoxComponent* TriggerComponent;}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = \textcolor{stringliteral}{"{}Spline"{}})}
+\DoxyCodeLine{72         UCurveFloat* MovementCurve;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = \textcolor{stringliteral}{"{}Spline"{}})}
+\DoxyCodeLine{75         \textcolor{keywordtype}{bool} bAutoActivate;}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = \textcolor{stringliteral}{"{}Spline"{}}, meta = (EditCondition = \textcolor{stringliteral}{"{}!bRestartOnEndTimeline"{}}))}
+\DoxyCodeLine{78         \textcolor{keywordtype}{bool} bReverseOnEndTimeline;}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = \textcolor{stringliteral}{"{}Spline"{}}, meta = (EditCondition = \textcolor{stringliteral}{"{}!bReverseOnEndTimeline"{}}))}
+\DoxyCodeLine{81         \textcolor{keywordtype}{bool} bRestartOnEndTimeline;}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{keyword}{private}:}
+\DoxyCodeLine{84     FTimeline MovementTimeline;}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,81 @@
+\hypertarget{_spike_trap_8h_source}{}\doxysection{Spike\+Trap.\+h}
+\label{_spike_trap_8h_source}\index{Source/WaveRunner/SpikeTrap.h@{Source/WaveRunner/SpikeTrap.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// Fill out your copyright notice in the Description page of Project Settings.}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}GameFramework/Actor.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Components/SplineComponent.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Components/BoxComponent.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Components/TimelineComponent.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}SpikeTrap.generated.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 UCLASS()}
+\DoxyCodeLine{13 class WAVERUNNER\_API \mbox{\hyperlink{class_a_spike_trap}{ASpikeTrap}} : public AActor}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     GENERATED\_BODY()}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \textcolor{comment}{// Sets default values for this actor's properties}}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_a_spike_trap}{ASpikeTrap}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     \textcolor{comment}{//FVector CurrentLocation;}}
+\DoxyCodeLine{23     \textcolor{comment}{//float speed;}}
+\DoxyCodeLine{24     \textcolor{comment}{//bool bIsMoving;}}
+\DoxyCodeLine{25     \textcolor{comment}{//float requestedHeight;}}
+\DoxyCodeLine{26     \textcolor{comment}{//UPROPERTY(EditAnywhere, Category = "{}Custom"{})}}
+\DoxyCodeLine{27         \textcolor{comment}{//double LinearSpeed;}}
+\DoxyCodeLine{28 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{29     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} BeginPlay() \textcolor{keyword}{override};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     UPROPERTY(EditAnywhere, BlueprintReadWrite)}
+\DoxyCodeLine{32         UTimelineComponent* ExampleTimelineComp;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     UPROPERTY(EditAnywhere, Category = \textcolor{stringliteral}{"{}SplineController"{}})}
+\DoxyCodeLine{35         \textcolor{keywordtype}{float} TotalPathTimeController;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     UPROPERTY(EditAnywhere, Category = \textcolor{stringliteral}{"{}SplineController"{}})}
+\DoxyCodeLine{38         \textcolor{keywordtype}{bool} bSplineInLoop;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} bCanMoveActor;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{float} StartTime;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{keyword}{public}:}
+\DoxyCodeLine{50     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} Tick(\textcolor{keywordtype}{float} DeltaTime) \textcolor{keyword}{override};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     UFUNCTION()}
+\DoxyCodeLine{58         \textcolor{keywordtype}{void} ProcessMovementTimeline(\textcolor{keywordtype}{float} value);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     UFUNCTION()}
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} OnEndMovementTimeline();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     UFUNCTION()}
+\DoxyCodeLine{72         \textcolor{keywordtype}{void} TriggerBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, \textcolor{keywordtype}{bool} bFromSweep, \textcolor{keyword}{const} FHitResult\& SweepResult);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     UFUNCTION()}
+\DoxyCodeLine{79         \textcolor{keywordtype}{void} TriggerEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{keyword}{public}:}
+\DoxyCodeLine{82     UPROPERTY(VisibleAnywhere)}
+\DoxyCodeLine{83         USplineComponent* SplineComponent;}
+\DoxyCodeLine{84     UPROPERTY(VisibleAnywhere)}
+\DoxyCodeLine{85         UStaticMeshComponent* MeshComponent;}
+\DoxyCodeLine{86     UPROPERTY(VisibleAnywhere)}
+\DoxyCodeLine{87         UBoxComponent* TriggerBox;}
+\DoxyCodeLine{88     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = \textcolor{stringliteral}{"{}Spline"{}}, meta = (AllowPrivateAccess = \textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{89         UCurveFloat* MovementCurve;}
+\DoxyCodeLine{90     }
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     UFUNCTION()}
+\DoxyCodeLine{97         \textcolor{keywordtype}{void} OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, \textcolor{keywordtype}{bool} bFromSweep, \textcolor{keyword}{const} FHitResult\& SweepResult);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{keyword}{private}:}
+\DoxyCodeLine{100     FTimeline MovementTimeline;}
+\DoxyCodeLine{101 \};}
+
+\end{DoxyCode}

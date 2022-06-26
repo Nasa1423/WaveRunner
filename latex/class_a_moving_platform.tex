@@ -1,0 +1,104 @@
+\hypertarget{class_a_moving_platform}{}\doxysection{AMoving\+Platform Class Reference}
+\label{class_a_moving_platform}\index{AMovingPlatform@{AMovingPlatform}}
+Inheritance diagram for AMoving\+Platform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_moving_platform}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_moving_platform_aae0e30205139e36b25d42d178bc29fd7}{Tick}} (float Delta\+Time) override
+\item 
+void \mbox{\hyperlink{class_a_moving_platform_adfd65572b0b6a0ae486f3cf5c24574b7}{Process\+Movement\+Timeline}} (float Value)
+\item 
+void \mbox{\hyperlink{class_a_moving_platform_a387c5a0f38825bb31caac4221032d1cc}{On\+End\+Movement\+Timeline}} ()
+\item 
+void \mbox{\hyperlink{class_a_moving_platform_a4a5eb302925b996e6fe2ef9560fc2434}{Trigger\+Begin\+Overlap}} (UPrimitive\+Component $\ast$Overlapped\+Component, AActor $\ast$Other\+Actor, UPrimitive\+Component $\ast$Other\+Comp, int32 Other\+Body\+Index, bool b\+From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\item 
+void \mbox{\hyperlink{class_a_moving_platform_a37f0d1d7263c0f007a6eca203aa50180}{Trigger\+End\+Overlap}} (UPrimitive\+Component $\ast$Overlapped\+Component, AActor $\ast$Other\+Actor, UPrimitive\+Component $\ast$Other\+Comp, int32 Other\+Body\+Index)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_moving_platform_ad0134b3e1d201ef67e8ee8b70dc24d45}\label{class_a_moving_platform_ad0134b3e1d201ef67e8ee8b70dc24d45}} 
+USpline\+Component $\ast$ {\bfseries Spline\+Component}
+\item 
+\mbox{\Hypertarget{class_a_moving_platform_a7af04c81a5ff2ef677f1930702b2c767}\label{class_a_moving_platform_a7af04c81a5ff2ef677f1930702b2c767}} 
+UStatic\+Mesh\+Component $\ast$ {\bfseries Mesh\+Component}
+\item 
+\mbox{\Hypertarget{class_a_moving_platform_a30df2adffa842edd7dbced027009a4d9}\label{class_a_moving_platform_a30df2adffa842edd7dbced027009a4d9}} 
+UBox\+Component $\ast$ {\bfseries Trigger\+Component}
+\item 
+\mbox{\Hypertarget{class_a_moving_platform_afc26a8fa0d2532d59bc8bcbdff5657c0}\label{class_a_moving_platform_afc26a8fa0d2532d59bc8bcbdff5657c0}} 
+UCurve\+Float $\ast$ {\bfseries Movement\+Curve}
+\item 
+\mbox{\Hypertarget{class_a_moving_platform_a29953587e0daebf465e6ae42b6c46d37}\label{class_a_moving_platform_a29953587e0daebf465e6ae42b6c46d37}} 
+bool {\bfseries b\+Auto\+Activate}
+\item 
+\mbox{\Hypertarget{class_a_moving_platform_a3ca377c4fd3de6c09de00c74071c3508}\label{class_a_moving_platform_a3ca377c4fd3de6c09de00c74071c3508}} 
+bool {\bfseries b\+Reverse\+On\+End\+Timeline}
+\item 
+\mbox{\Hypertarget{class_a_moving_platform_aec86f45a7b65016b37ddeac157162feb}\label{class_a_moving_platform_aec86f45a7b65016b37ddeac157162feb}} 
+bool {\bfseries b\+Restart\+On\+End\+Timeline}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_moving_platform_a301064e1a4a570c99ab63db777a61072}\label{class_a_moving_platform_a301064e1a4a570c99ab63db777a61072}} 
+virtual void {\bfseries Begin\+Play} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_moving_platform_a387c5a0f38825bb31caac4221032d1cc}\label{class_a_moving_platform_a387c5a0f38825bb31caac4221032d1cc}} 
+\index{AMovingPlatform@{AMovingPlatform}!OnEndMovementTimeline@{OnEndMovementTimeline}}
+\index{OnEndMovementTimeline@{OnEndMovementTimeline}!AMovingPlatform@{AMovingPlatform}}
+\doxysubsubsection{\texorpdfstring{OnEndMovementTimeline()}{OnEndMovementTimeline()}}
+{\footnotesize\ttfamily void AMoving\+Platform\+::\+On\+End\+Movement\+Timeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Event that will be executed on timeline movement end \mbox{\Hypertarget{class_a_moving_platform_adfd65572b0b6a0ae486f3cf5c24574b7}\label{class_a_moving_platform_adfd65572b0b6a0ae486f3cf5c24574b7}} 
+\index{AMovingPlatform@{AMovingPlatform}!ProcessMovementTimeline@{ProcessMovementTimeline}}
+\index{ProcessMovementTimeline@{ProcessMovementTimeline}!AMovingPlatform@{AMovingPlatform}}
+\doxysubsubsection{\texorpdfstring{ProcessMovementTimeline()}{ProcessMovementTimeline()}}
+{\footnotesize\ttfamily void AMoving\+Platform\+::\+Process\+Movement\+Timeline (\begin{DoxyParamCaption}\item[{float}]{Value }\end{DoxyParamCaption})}
+
+Function to change state of timeline
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & value Variable to set timeline state (0 is start and 1 is end) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_moving_platform_aae0e30205139e36b25d42d178bc29fd7}\label{class_a_moving_platform_aae0e30205139e36b25d42d178bc29fd7}} 
+\index{AMovingPlatform@{AMovingPlatform}!Tick@{Tick}}
+\index{Tick@{Tick}!AMovingPlatform@{AMovingPlatform}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void AMoving\+Platform\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Default tick function
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & Delta\+Seconds Defines how much seconds does tick take \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_moving_platform_a4a5eb302925b996e6fe2ef9560fc2434}\label{class_a_moving_platform_a4a5eb302925b996e6fe2ef9560fc2434}} 
+\index{AMovingPlatform@{AMovingPlatform}!TriggerBeginOverlap@{TriggerBeginOverlap}}
+\index{TriggerBeginOverlap@{TriggerBeginOverlap}!AMovingPlatform@{AMovingPlatform}}
+\doxysubsubsection{\texorpdfstring{TriggerBeginOverlap()}{TriggerBeginOverlap()}}
+{\footnotesize\ttfamily void AMoving\+Platform\+::\+Trigger\+Begin\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component $\ast$}]{Overlapped\+Component,  }\item[{AActor $\ast$}]{Other\+Actor,  }\item[{UPrimitive\+Component $\ast$}]{Other\+Comp,  }\item[{int32}]{Other\+Body\+Index,  }\item[{bool}]{b\+From\+Sweep,  }\item[{const FHit\+Result \&}]{Sweep\+Result }\end{DoxyParamCaption})}
+
+Event that will be executed when we step on our Trigger\+Component \mbox{\Hypertarget{class_a_moving_platform_a37f0d1d7263c0f007a6eca203aa50180}\label{class_a_moving_platform_a37f0d1d7263c0f007a6eca203aa50180}} 
+\index{AMovingPlatform@{AMovingPlatform}!TriggerEndOverlap@{TriggerEndOverlap}}
+\index{TriggerEndOverlap@{TriggerEndOverlap}!AMovingPlatform@{AMovingPlatform}}
+\doxysubsubsection{\texorpdfstring{TriggerEndOverlap()}{TriggerEndOverlap()}}
+{\footnotesize\ttfamily void AMoving\+Platform\+::\+Trigger\+End\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component $\ast$}]{Overlapped\+Component,  }\item[{AActor $\ast$}]{Other\+Actor,  }\item[{UPrimitive\+Component $\ast$}]{Other\+Comp,  }\item[{int32}]{Other\+Body\+Index }\end{DoxyParamCaption})}
+
+Event that will be executed when we leave our Trigger\+Component 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Wave\+Runner/Moving\+Platform.\+h\item 
+Source/\+Wave\+Runner/Moving\+Platform.\+cpp\end{DoxyCompactItemize}

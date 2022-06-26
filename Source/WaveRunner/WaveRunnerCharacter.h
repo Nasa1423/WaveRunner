@@ -31,6 +31,11 @@ class AWaveRunnerCharacter : public APaperCharacter
 	class USpringArmComponent* CameraBoom;
 
 	UTextRenderComponent* TextComponent;
+    /**
+     * Default tick function
+     *
+     * \param float DeltaSeconds Defines how much seconds does tick take
+     */
 	virtual void Tick(float DeltaSeconds) override;
 protected:
 	// The animation to play while running around
@@ -57,19 +62,37 @@ protected:
 	/** Called to choose the correct animation to play based on the character's movement state */
 	void UpdateAnimation();
 
-	/** Called for side to side input */
+    /**
+     * Function to move the character
+     *
+     * \param float Value Defines the speed of the character
+     */
 	void MoveRight(float Value);
 
+    /**
+     * Function to launch projectile
+     *
+     */
 	void Lazershot();
 
+    /**
+     * Function to control animation
+     *
+     */
 	void UpdateCharacter();
 
 	UFUNCTION()
+    /**
+     * Function to kill character
+     *
+     */
 	void Suicide();
 
-	// APawn interface
+    /**
+     * Function to initialize APawn interface
+     *
+     */
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
-	// End of APawn interface
 
 public:
 	AWaveRunnerCharacter();

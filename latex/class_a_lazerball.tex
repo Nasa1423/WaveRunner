@@ -1,0 +1,68 @@
+\hypertarget{class_a_lazerball}{}\doxysection{ALazerball Class Reference}
+\label{class_a_lazerball}\index{ALazerball@{ALazerball}}
+Inheritance diagram for ALazerball\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_lazerball}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_lazerball_a811fc36ef9c6d56e08389988539cadd3}{Tick}} (float Delta\+Seconds) override
+\item 
+void \mbox{\hyperlink{class_a_lazerball_a4d5013cd8d5b25446b8d48920b775032}{Fire\+In\+Direction}} (const FVector \&Shoot\+Direction)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_lazerball_aacaafbc1eb4e14b4474b6987efe54b6b}\label{class_a_lazerball_aacaafbc1eb4e14b4474b6987efe54b6b}} 
+USphere\+Component $\ast$ {\bfseries Collision\+Component}
+\item 
+\mbox{\Hypertarget{class_a_lazerball_ab3de62adcbe70bf4933d1dcfb60a3c33}\label{class_a_lazerball_ab3de62adcbe70bf4933d1dcfb60a3c33}} 
+class UPaper\+Flipbook $\ast$ {\bfseries Projectile\+Animation}
+\item 
+\mbox{\Hypertarget{class_a_lazerball_a5c17ff9494ca010ded0e47a01b97d472}\label{class_a_lazerball_a5c17ff9494ca010ded0e47a01b97d472}} 
+class UProjectile\+Movement\+Component $\ast$ {\bfseries Projectile\+Movement\+Component}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_lazerball_a9642d345f0586c54717e1ff0f6164ae1}\label{class_a_lazerball_a9642d345f0586c54717e1ff0f6164ae1}} 
+virtual void {\bfseries Begin\+Play} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_lazerball_a4d5013cd8d5b25446b8d48920b775032}\label{class_a_lazerball_a4d5013cd8d5b25446b8d48920b775032}} 
+\index{ALazerball@{ALazerball}!FireInDirection@{FireInDirection}}
+\index{FireInDirection@{FireInDirection}!ALazerball@{ALazerball}}
+\doxysubsubsection{\texorpdfstring{FireInDirection()}{FireInDirection()}}
+{\footnotesize\ttfamily void ALazerball\+::\+Fire\+In\+Direction (\begin{DoxyParamCaption}\item[{const FVector \&}]{Shoot\+Direction }\end{DoxyParamCaption})}
+
+Function to determine the direction of the shot
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & Shoot\+Direction will help to determine the direction of the shot \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_lazerball_a811fc36ef9c6d56e08389988539cadd3}\label{class_a_lazerball_a811fc36ef9c6d56e08389988539cadd3}} 
+\index{ALazerball@{ALazerball}!Tick@{Tick}}
+\index{Tick@{Tick}!ALazerball@{ALazerball}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void ALazerball\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Default tick function
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & Delta\+Seconds Defines how much seconds does tick take \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Wave\+Runner/Lazerball.\+h\item 
+Source/\+Wave\+Runner/Lazerball.\+cpp\end{DoxyCompactItemize}
