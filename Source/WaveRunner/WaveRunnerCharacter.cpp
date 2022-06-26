@@ -172,19 +172,13 @@ void AWaveRunnerCharacter::Lazershot()
 			SpawnParams.Instigator = GetInstigator();
 
 			// Spawn the projectile at the muzzle.
-			ALazerball* Lazerball = World->SpawnActor<ALazerball>(MuzzleLocation, MuzzleRotation, SpawnParams);
-			if (Lazerball)
-			{
+			//ALazerball* Lazerball = World->SpawnActor<ALazerball>(MuzzleLocation, MuzzleRotation, SpawnParams);
+			//if (Lazerball)
+			//{
 				// Set the projectile's initial trajectory.
-				FVector LaunchDirection = MuzzleRotation.Vector();
+			//	FVector LaunchDirection = MuzzleRotation.Vector();
 				//Lazerball->FireInDirection(LaunchDirection);
-			}
+			//}
 		}
 	}
-}
-
-void AWaveRunnerCharacter::Suicide() {
-	DisableInput(Cast<APlayerController>(this));
-	GetSprite()->SetFlipbook(DeathAnimation);
-
 }
